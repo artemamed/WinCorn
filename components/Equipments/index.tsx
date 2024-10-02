@@ -176,7 +176,7 @@ const Equipments = () => {
 
                 <p className="text-lg sm:text-xl md:text-2xl mt-8 text-gray-600">
                     Do you have any queries or would like to know more about us? Feel free to contact us.{" "}
-                    <Link href="https://www.dynamicmedicalsolution.com/contact" legacyBehavior>
+                    <Link href="/contact" legacyBehavior>
                         <a className="text-green-600 hover:underline flex items-center justify-center mt-4 font-semibold">
                             Contact us <FaPhoneAlt className="ml-2" size={20} />
                         </a>

@@ -67,7 +67,7 @@ const ContactForm = () => {
   }
 
   return (
-    <div className="mx-auto mt-8 p-5 bg-white shadow-md rounded-lg">
+    <div className="mx-auto mt-8 p-5 bg-white shadow-2xl rounded-xl">
       <h2 className="text-4xl text-center font-bold text-green-600 py-6">
         Contact Form
       </h2>

@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import { FaMapMarkerAlt, FaEnvelope, FaPhone, FaFacebook, FaTwitter, FaInstagram, FaLinkedin } from 'react-icons/fa';
 
 export default function Footer() {
@@ -16,21 +17,21 @@ export default function Footer() {
         <div className="w-full md:w-1/6 mb-6 text-center md:text-left">
           <h4 className="text-xl font-bold">About Us</h4>
           <ul className="text-gray-300 space-y-2">
-            <li className="hover:text-green-400 transition duration-300 cursor-pointer">Home</li>
-            <li className="hover:text-green-400 transition duration-300 cursor-pointer">About Us</li>
-            <li className="hover:text-green-400 transition duration-300 cursor-pointer">Our Blog</li>
-            <li className="hover:text-green-400 transition duration-300 cursor-pointer">Contact Us</li>
+            <li className="hover:text-green-400 transition duration-300 cursor-pointer"><Link href="/">Home</Link></li>
+            <li className="hover:text-green-400 transition duration-300 cursor-pointer"><Link href="/about">About Us</Link></li>
+            <li className="hover:text-green-400 transition duration-300 cursor-pointer"><Link href="/blogs">Our Blog</Link></li>
+            <li className="hover:text-green-400 transition duration-300 cursor-pointer"><Link href="/contact">Contact Us</Link></li>
           </ul>
         </div>
 
         <div className="w-full md:w-1/6 mb-6 text-center md:text-left">
           <h4 className="text-xl font-bold">Policies</h4>
           <ul className="text-gray-300 space-y-2">
-            <li className="hover:text-green-400 transition duration-300 cursor-pointer">Terms & Condition</li>
-            <li className="hover:text-green-400 transition duration-300 cursor-pointer">Shipping Policy</li>
-            <li className="hover:text-green-400 transition duration-300 cursor-pointer">Refund Policy</li>
-            <li className="hover:text-green-400 transition duration-300 cursor-pointer">Cookies Policy</li>
-            <li className="hover:text-green-400 transition duration-300 cursor-pointer">Privacy Policy</li>
+            <li className="hover:text-green-400 transition duration-300 cursor-pointer"><Link href="/terms-and-conditions">Terms & Condition</Link></li>
+            <li className="hover:text-green-400 transition duration-300 cursor-pointer"><Link href="/shipping-policy">Shipping Policy</Link></li>
+            <li className="hover:text-green-400 transition duration-300 cursor-pointer"><Link href="/refund-policy">Refund Policy</Link></li>
+            <li className="hover:text-green-400 transition duration-300 cursor-pointer"><Link href="/cookie-policy">Cookies Policy</Link></li>
+            <li className="hover:text-green-400 transition duration-300 cursor-pointer"><Link href="/privacy-policy">Privacy Policy</Link></li>
           </ul>
         </div>
 
