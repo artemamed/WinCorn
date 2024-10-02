@@ -96,7 +96,7 @@ export default function Carousel() {
                 <div className="md:hidden relative w-full h-64">
                     {slides.map((slide, index) => (
                         <div key={index} className={`absolute inset-0 transition-opacity duration-1000 ${currentSlide === index ? 'opacity-100' : 'opacity-0'}`}>
-                            <Image src={slide.image} alt={`Slide ${index + 1}`} layout="fill" objectFit="cover" />
+                            <Image src={slide.image} alt={`Slide ${index + 1}`} fill style={{ objectFit: 'cover' }}  />
                         </div>
                     ))}
                     {/* Navigation buttons */}
