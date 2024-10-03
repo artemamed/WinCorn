@@ -34,8 +34,8 @@ export default function About() {
                   width={64}
                   height={64}
                   alt="signature"
-                  className="h-16 object-cover object-center inline-block"
-                  src="/"
+                  className="h-16 w-auto object-cover object-center inline-block"
+                  src="/images/about_us/CEO-SIGN.png"
                 />
                 <span className="text-base text-black font-semibold ml-2">
                   Jason Boroff, CEO of Medical Solutions
@@ -48,7 +48,7 @@ export default function About() {
                 height={400}
                 className="object-cover object-center rounded-lg shadow-lg transition-transform duration-500 hover:scale-105 border border-green-300"
                 alt="Jason Boroff"
-                src="/"
+                src="/images/about_us/CEO-Artema1.jpeg"
               />
             </div>
           </div>
@@ -71,7 +71,7 @@ export default function About() {
                 height={700}
                 className="object-cover object-center rounded-lg shadow-lg transition-transform duration-500 hover:scale-105 border border-green-300"
                 alt="Dynamic Med Vision"
-                src="/"
+                src="/images/about_us/services.png"
               />
             </div>
           </div>

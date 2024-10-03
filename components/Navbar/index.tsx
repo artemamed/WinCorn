@@ -48,7 +48,6 @@ const Navbar: React.FC = () => {
         }));
     };
 
-    // Function to handle link click in mobile menu
     const handleLinkClick = () => {
         setMobileMenuOpen(false); // Close mobile menu
         setMobileDropdownVisible({
@@ -86,23 +85,33 @@ const Navbar: React.FC = () => {
                             placeholder="Search Products"
                             value={searchQuery}
                             onChange={handleSearchChange}
-                            className="bg-gray-200 w-[20rem] pl-10 pr-4 py-2 rounded-full border focus:outline-none focus:ring-2 focus:ring-orange-400 transition"
+                            className="bg-gray-200 w-[20rem] pl-10 pr-4 py-2 rounded-full border focus:outline-none focus:ring-2 focus:ring-green-400 transition"
                         />
                         <FiSearch className="absolute top-1/2 left-3 transform -translate-y-1/2 text-gray-500" />
                     </div>
 
                     {/* Cart Icon */}
                     <div className="relative">
-                        <FaShoppingCart className="text-black cursor-pointer hover:text-orange-400" size={30} />
+                        <FaShoppingCart className="text-black cursor-pointer hover:text-green-400" size={30} />
                         <span className="absolute top-0 right-0 bg-green-500 text-white text-xs rounded-full px-1">
                             2
                         </span>
                     </div>
 
-                    {/* Sign In Button */}
-                    <button className="py-2 px-6 bg-green-500 text-white font-semibold rounded-full shadow-lg hover:bg-green-600 transition transform hover:scale-105">
-                        Sign In
-                    </button>
+                    <div className="space-x-4">
+                        {/* Sign In Button */}
+                        <Link href="/auth/login">
+                            <button className="py-2 px-6 bg-green-500 text-white font-semibold rounded-full shadow-lg hover:bg-green-600 transition transform hover:scale-105">
+                                Sign In
+                            </button>
+                        </Link>
+                         {/* Register Button */}
+                         <Link href="/auth/register">
+                            <button className="py-2 px-6 bg-green-500 text-white font-semibold rounded-full shadow-lg hover:bg-green-600 transition transform hover:scale-105">
+                                Register
+                            </button>
+                        </Link>
+                    </div>
                 </div>
             </nav>
 
@@ -221,6 +230,23 @@ const Navbar: React.FC = () => {
                                 Contact Us
                             </Link>
                         </li>
+                        {/* Sign In Button in Mobile Menu */}
+                        <li>
+                            <Link href="/auth/login" onClick={handleLinkClick}>
+                                <button className="w-full py-2 px-6 bg-green-500 text-white font-semibold rounded-full shadow-lg hover:bg-green-600 transition transform hover:scale-105">
+                                    Sign In
+                                </button>
+                            </Link>
+                        </li>
+                        {/* Register Button in Mobile Menu */}
+                        <li>
+                            <Link href="/auth/register" onClick={handleLinkClick}>
+                                <button className="w-full py-2 px-6 bg-green-500 text-white font-semibold rounded-full shadow-lg hover:bg-green-600 transition transform hover:scale-105">
+                                    Register
+                                </button>
+                            </Link>
+                        </li>
+                        <li></li>
                     </ul>
                 </div>
             )}
@@ -245,7 +271,7 @@ const Navbar: React.FC = () => {
                             Products <BsChevronDown className="ml-1" />
                         </span>
                         {dropdownVisible.products && (
-                            <div 
+                            <div
                                 className="absolute top-8 left-0 bg-white shadow-lg rounded-lg py-2 w-[12rem] z-20"
                                 onMouseEnter={() => handleMouseEnter("products")}
                                 onMouseLeave={() => handleMouseLeave("products")}
@@ -271,7 +297,7 @@ const Navbar: React.FC = () => {
                             Resources <BsChevronDown className="ml-1" />
                         </span>
                         {dropdownVisible.resources && (
-                            <div 
+                            <div
                                 className="absolute top-8 left-0 bg-white shadow-lg rounded-lg py-2 w-[12rem] z-20"
                                 onMouseEnter={() => handleMouseEnter("resources")}
                                 onMouseLeave={() => handleMouseLeave("resources")}
@@ -305,7 +331,7 @@ const Navbar: React.FC = () => {
                             Policies <BsChevronDown className="ml-1" />
                         </span>
                         {dropdownVisible.policies && (
-                            <div 
+                            <div
                                 className="absolute top-8 left-0 bg-white shadow-lg rounded-lg py-2 w-[12rem] z-20"
                                 onMouseEnter={() => handleMouseEnter("policies")}
                                 onMouseLeave={() => handleMouseLeave("policies")}

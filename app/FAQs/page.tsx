@@ -7,40 +7,35 @@ const FAQs = () => {
 
   const faqs = [
     {
-      question: "Does Artema provide any shipping services to its customers?",
-      answer:
-        "Yes, Artema provides shipping services, but only upon the customer's request with extra charges.",
+        question: "Does Wincorn provide any shipping services to its customers?",
+        answer: "Yes, Wincorn provides shipping services, but the shipping costs are different depending on the customer’s location.",
     },
     {
-      question: "Is Artema responsible for any damage to the instrument?",
-      answer:
-        "Yes, but only if the damage occurred within the company during manufacturing or final packaging. Once the instrument is dispatched, the company is not responsible. In both cases, the customer should provide proof of the claim.",
+        question: "Is Wincorn responsible for any damage to the instrument?",
+        answer: "Yes, but only if the company is the cause of the damage. Once the instrument is released, the company is not responsible. The customer should provide proof of the claim for both cases.",
     },
     {
-      question: "Does the product price mentioned on the website include tax?",
-      answer: "Yes, tax is already included in the product description.",
+        question: "Does the product price include tax?",
+        answer: "Yes, tax is already included in the product price and is mentioned in the description.",
     },
     {
-      question: "Does Artema accept payments for the products only through a bank?",
-      answer:
-        "Yes, the company only accepts payments officially made through the bank. Cash payments are not accepted in any condition.",
+        question: "Does Wincorn accept payments only through a bank?",
+        answer: "Yes, Wincorn only accepts payments officially made through the bank. Cash payments are never accepted.",
     },
     {
-      question: "Does the company take responsibility for the loss in case of any disaster?",
-      answer:
-        "Yes, the company should take responsibility for any loss, but only if it is the cause of the disaster. Otherwise, for all the social or natural circumstances that are beyond the control of the company, the customer should take responsibility.",
+        question: "Does Wincorn take responsibility for the loss in case of any disaster?",
+        answer: "Yes, the company should take responsibility for any loss, but only if the company is the cause of the disaster. Otherwise, for all other conditions, the customer should take responsibility.",
     },
     {
-      question: "For how many days can the customer apply for a refund?",
-      answer:
-        "A customer can apply for a refund within three working days, provided it is not against the company policy.",
+        question: "What is the duration of applying for a refund?",
+        answer: "A customer can apply for a refund within 7 working days, but it should not be against the company policy.",
     },
     {
-      question: "Does the company provide services other than surgical instruments?",
-      answer:
-        "Yes, the company also provides hospital furniture and physiotherapy instruments to its customers.",
+        question: "Does the company provide services other than pharmaceutical products?",
+        answer: "Yes, the company also provides surgical instruments to its customers.",
     },
-  ];
+];
+
 
   const toggleFAQ = (index: number) => {
     setActiveIndex(activeIndex === index ? null : index);

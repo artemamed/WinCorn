@@ -11,9 +11,9 @@ const RefundPolicy: React.FC = () => {
         </h1>
 
         <p className="text-lg leading-relaxed text-gray-700 mb-8">
-          Thank you for shopping at <strong>Artema Medical Group</strong>. If, for any reason, you are
-          not completely satisfied with a purchase, we invite you to review our
-          policy on refunds and returns.
+          At <strong>Wincorn Pharmaceuticals</strong>, If, we are committed to providing high-quality surgical instruments. If you are
+          not completely satisfied with your purchase, we offer a refund policy to ensure your confidence in our
+          products.
         </p>
 
         {/* Order Cancellation Rights */}
@@ -21,71 +21,42 @@ const RefundPolicy: React.FC = () => {
           <div className="flex items-center space-x-3 mb-4">
             <FiArrowLeftCircle className="text-green-500 text-2xl" />
             <h2 className="text-2xl font-bold text-gray-800">
-              Your Order Cancellation Rights
+              Eligibility for Refund:
             </h2>
           </div>
           <p className="text-gray-700 leading-relaxed mb-4">
-            You are entitled to cancel your order within 7 days without giving any
-            reason. The deadline for cancellation is 7 days from the date on which
-            you received the goods or a third party you appointed (not the carrier)
-            takes possession of the product.
+            Refund requests can be made within 7 days of the purchase date. Products must be in their
+            original condition, unused, and in the original packaging. Proof of purchase (invoice or receipt) is
+            required for all refund requests.
           </p>
-          <p className="text-gray-700 leading-relaxed">
-            To exercise your right of cancellation, please inform us by:
-          </p>
-          <ul className="list-disc pl-6 text-gray-700">
-            <li>
-              Email:{" "}
-              <a href="mailto:sales@artemamed.com" className="text-blue-500 hover:underline">
-                sales@artemamed.com
-              </a>
-            </li>
-          </ul>
+
         </div>
 
         {/* Conditions for Returns */}
         <div className="mb-8">
           <div className="flex items-center space-x-3 mb-4">
             <FiBox className="text-green-500 text-2xl" />
-            <h2 className="text-2xl font-bold text-gray-800">Conditions for Returns</h2>
+            <h2 className="text-2xl font-bold text-gray-800">Refund Process:</h2>
           </div>
           <p className="text-gray-700 leading-relaxed mb-4">
-            To be eligible for a return, please ensure:
+            To initiate a refund, please contact our customer service team. Provide your order number and
+            reason for the refund. Our team will review your request and may ask for additional information
+            or photos of the product. Once your refund request is approved, we will issue a return
+            authorization and provide instructions for returning the item.
           </p>
-          <ul className="list-disc pl-6 text-gray-700">
-            <li>The goods were purchased in the last 7 days.</li>
-            <li>The goods are in the original packaging.</li>
-          </ul>
-          <p className="text-gray-700 leading-relaxed mt-4">
-            The following goods cannot be returned:
-          </p>
-          <ul className="list-disc pl-6 text-gray-700 mb-4">
-            <li>Custom or personalized goods.</li>
-            <li>Goods that deteriorate rapidly or are expired.</li>
-            <li>Unsealed goods due to hygiene reasons.</li>
-            <li>Goods inseparably mixed with other items after delivery.</li>
-          </ul>
-          <p className="text-gray-700 leading-relaxed">
-            We reserve the right to refuse returns that don&apos;t meet these conditions.
-          </p>
+
         </div>
 
         {/* Returning Goods */}
         <div className="mb-8">
           <div className="flex items-center space-x-3 mb-4">
             <FiArrowLeftCircle className="text-green-500 text-2xl" />
-            <h2 className="text-2xl font-bold text-gray-800">Returning Goods</h2>
+            <h2 className="text-2xl font-bold text-gray-800">Return Shipping:</h2>
           </div>
           <p className="text-gray-700 leading-relaxed mb-4">
-            You are responsible for the cost and risk of returning the goods to us. Send
-            returns to:
-          </p>
-          <address className="bg-gray-100 p-4 rounded-lg text-gray-800 mb-4">
-            Kashmir Rd, Pakka Garha Ghumman, Sialkot, Punjab, 51310
-          </address>
-          <p className="text-gray-700 leading-relaxed">
-            We recommend using an insured, trackable mail service. Refunds cannot be
-            issued without proof of return.
+            Customers are responsible for return shipping costs unless the item is defective or the wrong
+            item was sent. We recommend using a trackable shipping service or purchasing shipping
+            insurance for items, as we cannot guarantee that we will receive your returned item.
           </p>
         </div>
 
@@ -93,12 +64,11 @@ const RefundPolicy: React.FC = () => {
         <div className="mb-8">
           <div className="flex items-center space-x-3 mb-4">
             <FiGift className="text-green-500 text-2xl" />
-            <h2 className="text-2xl font-bold text-gray-800">Gifts</h2>
+            <h2 className="text-2xl font-bold text-gray-800">Refund Timeline:</h2>
           </div>
           <p className="text-gray-700 leading-relaxed mb-4">
-            If the goods were marked as a gift and shipped directly to you, you will
-            receive a gift credit for the return. If the goods were not marked as a gift,
-            the refund will go to the original purchaser.
+            Once we receive the returned item, we will process your refund within 5-10 business days.
+            Refunds will be issued to the original payment method used at the time of purchase.
           </p>
         </div>
 
@@ -106,16 +76,30 @@ const RefundPolicy: React.FC = () => {
         <div className="mb-8">
           <div className="flex items-center space-x-3 mb-4">
             <FiMail className="text-green-500 text-2xl" />
-            <h2 className="text-2xl font-bold text-gray-800">Contact Us</h2>
+            <h2 className="text-2xl font-bold text-gray-800">Defective or Damaged Products:</h2>
           </div>
           <p className="text-gray-700 leading-relaxed">
-            If you have any questions, feel free to contact us at:{" "}
-            <a href="mailto:sales@artemamed.com" className="text-blue-500 hover:underline">
-              sales@artemamed.com
-            </a>
+            If you receive a defective or damaged product, please contact us immediately. We will arrange
+            for a replacement or full refund at no additional cost.
+
+          </p>
+        </div>
+
+        
+        <div className="mb-8">
+          <div className="flex items-center space-x-3 mb-4">
+            <FiMail className="text-green-500 text-2xl" />
+            <h2 className="text-2xl font-bold text-gray-800">Non-Refundable Items:</h2>
+          </div>
+          <p className="text-gray-700 leading-relaxed">
+            Wincorn Pharmaceuticals reserves the right to modify this refund policy at any time. Changes will be
+            posted on our website, and the revised policy will apply to all purchases made after the effective date.
+
           </p>
         </div>
       </div>
+
+
 
       {/* Footer */}
       <footer className="mt-10 text-center text-gray-600">

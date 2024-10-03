@@ -1,5 +1,5 @@
 import React from "react";
-import { FiMail, FiTruck, FiMapPin, FiPackage, FiRefreshCw, FiXCircle, FiAlertCircle, FiCheckCircle } from "react-icons/fi";
+import { FiMail, FiTruck, FiMapPin, FiPackage, FiXCircle, FiAlertCircle, FiCheckCircle } from "react-icons/fi";
 
 const ShippingPolicy: React.FC = () => {
   return (
@@ -11,10 +11,8 @@ const ShippingPolicy: React.FC = () => {
         </h1>
 
         <p className="text-lg leading-relaxed text-gray-700 mb-8">
-          Artema is committed to excellence and the full satisfaction of our
-          customers. We proudly offer reliable shipping services and are doing
-          everything in our power to get your order to you as soon as possible.
-          Please consider any holidays that might impact delivery times.
+          At Wincorn Pharmaceuticals, we strive to provide timely and reliable shipping for our surgical
+          instruments and pharmaceutical products. Below are the details of our shipping policy.
         </p>
 
         {/* Section 1: Shipping */}
@@ -24,115 +22,84 @@ const ShippingPolicy: React.FC = () => {
             <h3 className="text-2xl font-bold text-gray-800"> SHIPPING</h3>
           </div>
           <p className="text-gray-700 leading-relaxed">
-            All orders for our products are processed and shipped out within 4-10
-            business days. Orders are not shipped or delivered on weekends or holidays.
-            If there is a significant delay in the shipment of your order, we will
-            contact you via email.
+            All orders are processed within 1-3 business days. Orders placed on weekends or holidays will
+            be processed on the next business day.
           </p>
         </div>
 
-        {/* Section 2: Wrong Address Disclaimer */}
+        {/* Section 2: Confirmation Email */}
         <div className="mb-10">
           <div className="flex items-center space-x-3 mb-4">
-            <FiMapPin className="text-green-500 text-2xl" />
-            <h3 className="text-2xl font-bold text-gray-800">
-                WRONG ADDRESS DISCLAIMER
-            </h3>
+            <FiMail className="text-green-500 text-2xl" />
+            <h3 className="text-2xl font-bold text-gray-800"> CONFIRMATION EMAIL</h3>
           </div>
           <p className="text-gray-700 leading-relaxed">
-            It is the customer’s responsibility to ensure the shipping address is
-            correct. If you believe you have provided an incorrect shipping address,
-            please contact us immediately.
+            You will receive a confirmation email once your order has been processed and shipped.
           </p>
         </div>
 
-        {/* Section 3: Undeliverable Orders */}
+        {/* Section 3: Shipping Costs */}
         <div className="mb-10">
           <div className="flex items-center space-x-3 mb-4">
             <FiPackage className="text-green-500 text-2xl" />
-            <h3 className="text-2xl font-bold text-gray-800">
-               UNDELIVERABLE ORDERS
-            </h3>
+            <h3 className="text-2xl font-bold text-gray-800"> SHIPPING COSTS</h3>
           </div>
           <p className="text-gray-700 leading-relaxed">
-            Orders returned as undeliverable due to incorrect shipping information
-            may be subject to a restocking fee.
+            Shipping costs are calculated at checkout based on the weight of the items and the selected
+            shipping method.
           </p>
         </div>
 
-        {/* Section 4: Lost/Stolen Packages */}
+        {/* Section 4: Tracking Number */}
+        <div className="mb-10">
+          <div className="flex items-center space-x-3 mb-4">
+            <FiCheckCircle className="text-green-500 text-2xl" />
+            <h3 className="text-2xl font-bold text-gray-800"> TRACKING NUMBER</h3>
+          </div>
+          <p className="text-gray-700 leading-relaxed">
+            Once your order has shipped, you will receive a tracking number via email. You can use this
+            tracking number to monitor the status of your shipment.
+          </p>
+        </div>
+
+        {/* Section 5: Delivery Issues */}
         <div className="mb-10">
           <div className="flex items-center space-x-3 mb-4">
             <FiXCircle className="text-green-500 text-2xl" />
-            <h3 className="text-2xl font-bold text-gray-800">
-               LOST/STOLEN PACKAGES
-            </h3>
+            <h3 className="text-2xl font-bold text-gray-800"> DELIVERY ISSUES</h3>
           </div>
           <p className="text-gray-700 leading-relaxed">
-            Artema is not responsible for lost or stolen packages. If your tracking
-            information states that your package was delivered, but you have not
-            received it, please report to local authorities.
+            If you experience any issues with your delivery (e.g., delayed, lost, or damaged items), please
+            contact our customer service team within 7 days of the expected delivery date. We will work to
+            resolve the issue promptly.
           </p>
         </div>
 
-        {/* Section 5: Return Request Days */}
+        {/* Section 6: Address Changes */}
         <div className="mb-10">
           <div className="flex items-center space-x-3 mb-4">
-            <FiRefreshCw className="text-green-500 text-2xl" />
-            <h3 className="text-2xl font-bold text-gray-800">
-               RETURN REQUEST DAYS
-            </h3>
+            <FiMapPin className="text-green-500 text-2xl" />
+            <h3 className="text-2xl font-bold text-gray-800"> ADDRESS CHANGES</h3>
           </div>
           <p className="text-gray-700 leading-relaxed">
-            You can return items within 3 days of receipt. The items must be returned
-            unopened and unused.
+            If you need to change your shipping address after placing an order, please contact us as soon as
+            possible. Changes can only be made before the order has been processed.
           </p>
         </div>
 
-        {/* Section 6: Out of Stock Item Process */}
+        {/* Section 7: Policy Modifications */}
         <div className="mb-10">
           <div className="flex items-center space-x-3 mb-4">
             <FiAlertCircle className="text-green-500 text-2xl" />
-            <h3 className="text-2xl font-bold text-gray-800">
-               OUT OF STOCK ITEM PROCESS
-            </h3>
+            <h3 className="text-2xl font-bold text-gray-800"> POLICY MODIFICATIONS</h3>
           </div>
           <p className="text-gray-700 leading-relaxed">
-            In case of out-of-stock items, Artema will wait for all items to be in
-            stock before dispatching.
+            Wincorn Pharmaceuticals reserves the right to modify this shipping policy at any time. Any changes will
+            be posted on our website, and the revised policy will apply to all orders placed after the effective date.
           </p>
         </div>
 
-        {/* Section 7: Import Duty and Taxes */}
-        <div className="mb-10">
-          <div className="flex items-center space-x-3 mb-4">
-            <FiCheckCircle className="text-green-500 text-2xl" />
-            <h3 className="text-2xl font-bold text-gray-800">
-               IMPORT DUTY AND TAXES
-            </h3>
-          </div>
-          <p className="text-gray-700 leading-relaxed">
-            Taxes and import duties can be pre-paid and included in the price of your
-            order. For more information, visit{" "}
-            <a href="https://artemamed.com" className="text-blue-500 underline">
-              Artema
-            </a>.
-          </p>
-        </div>
-
-        {/* Section 8: Acceptance */}
-        <div className="mb-10">
-          <div className="flex items-center space-x-3 mb-4">
-            <FiCheckCircle className="text-green-500 text-2xl" />
-            <h3 className="text-2xl font-bold text-gray-800"> ACCEPTANCE</h3>
-          </div>
-          <p className="text-gray-700 leading-relaxed">
-            By accessing our site and placing an order, you agree to the terms of
-            this Shipping Policy.
-          </p>
-        </div>
-
-        {/* Section 9: Contact Information */}
+        {/* Section 8: Contact Information */}
         <div className="mb-10">
           <div className="flex items-center space-x-3 mb-4">
             <FiMail className="text-green-500 text-2xl" />
@@ -141,8 +108,8 @@ const ShippingPolicy: React.FC = () => {
           <p className="text-gray-700 leading-relaxed">
             For any questions or concerns, please reach out to us at: <br />
             Email:{" "}
-            <a href="mailto:sales@artemamed.com" className="text-blue-500 underline">
-              sales@artemamed.com
+            <a href="mailto:sales@wincornpharma.com" className="text-blue-500 underline">
+              sales@wincornpharma.com
             </a>
           </p>
         </div>
@@ -150,7 +117,7 @@ const ShippingPolicy: React.FC = () => {
 
       {/* Footer */}
       <footer className="mt-10 text-center text-gray-600">
-        <p>© 2024 Artema Medical Solutions. All rights reserved.</p>
+        <p>© 2024 Wincorn Pharmaceuticals. All rights reserved.</p>
       </footer>
     </div>
   );
