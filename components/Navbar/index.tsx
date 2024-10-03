@@ -258,9 +258,7 @@ const Navbar: React.FC = () => {
             <nav className="hidden lg:flex items-center justify-center px-6 max-w-7xl mx-auto">
                 <ul className="flex space-x-8 items-center text-lg">
                     <li>
-                        <Link href="/" className="text-black">
-                            Home
-                        </Link>
+                        <Link href="/" className="text-black">Home</Link>
                     </li>
                     <li
                         className="relative"
@@ -317,11 +315,6 @@ const Navbar: React.FC = () => {
                             </div>
                         )}
                     </li>
-                    <li>
-                        <Link href="/about" className="text-black">
-                            About Us
-                        </Link>
-                    </li>
                     <li
                         className="relative"
                         onMouseEnter={() => handleMouseEnter("policies")}
@@ -337,7 +330,7 @@ const Navbar: React.FC = () => {
                                 onMouseLeave={() => handleMouseLeave("policies")}
                             >
                                 <Link href="/terms-and-conditions" className="block px-4 py-2 hover:bg-gray-200">
-                                    Terms & Condition
+                                    Terms & Conditions
                                 </Link>
                                 <Link href="/shipping-policy" className="block px-4 py-2 hover:bg-gray-200">
                                     Shipping Policy
@@ -355,9 +348,10 @@ const Navbar: React.FC = () => {
                         )}
                     </li>
                     <li>
-                        <Link href="/contact" className="text-black">
-                            Contact Us
-                        </Link>
+                        <Link href="/about" className="text-black">About Us</Link>
+                    </li>
+                    <li>
+                        <Link href="/contact" className="text-black">Contact Us</Link>
                     </li>
                 </ul>
             </nav>

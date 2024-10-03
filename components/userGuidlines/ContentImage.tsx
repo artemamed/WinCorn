@@ -6,10 +6,10 @@ import { Slide } from "react-awesome-reveal";
 
 function ContentImage() {
   return (
-    <div className="bg-white mt-20 shadow-lg rounded-xl overflow-hidden max-w-7xl ml-[6rem] border border-green-500">
+    <div className="bg-white mt-20 shadow-lg rounded-xl overflow-hidden max-w-7xl mx-auto border border-green-500">
       <div className="lg:flex lg:justify-between">
         {/* Text Section */}
-        <div className="lg:w-1/2 px-5 lg:px-10 py-10">
+        <div className="lg:w-1/2 px-4 lg:px-10 py-10">
           {contentPG.map((data, index) => (
             <section key={index} className="mb-8">
               <Slide direction="left" duration={1200} triggerOnce>

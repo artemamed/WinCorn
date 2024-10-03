@@ -9,7 +9,7 @@ import { FaArrowDown, FaArrowUp } from "react-icons/fa6";
 function Page() {
   const [isOpen, setIsOpen] = useState(true);
   const [isSurface, setIsSurface] = useState(false);
-  
+
   const handleChange = () => {
     setIsOpen(!isOpen);
   };
@@ -19,9 +19,9 @@ function Page() {
   };
 
   return (
-    <div className="m-[5rem]">
-      <div className="">
-        <h1 className="text-3xl lg:text-5xl font-bold mb-6 text-green-600 text-center">
+    <div className="m-4 md:m-8 lg:m-16">
+      <div>
+        <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 text-green-600 text-center">
           User Guidelines
         </h1>
         <div className="w-full flex justify-center mb-8">
@@ -30,7 +30,7 @@ function Page() {
       </div>
 
       <ContentImage />
-      <div className="px-5 lg:px-36 max-w-7xl ml-[6rem] bg-white mt-20 shadow-xl rounded-lg overflow-hidden">
+      <div className="px-4 md:px-8 lg:px-36 max-w-7xl mx-auto bg-white mt-20 shadow-xl rounded-lg overflow-hidden">
         <h2 className="text-center font-bold md:text-3xl text-2xl my-6">
           Instrument Checkup
         </h2>
@@ -48,9 +48,9 @@ function Page() {
             Function
             <span className="transition-transform duration-400 transform">
               {isOpen ? (
-                <FaArrowUp size={15} className="mt-[10px] mx-1" />
+                <FaArrowUp size={15} className="mt-1 mx-1" />
               ) : (
-                <FaArrowDown size={15} className="mt-[10px] mx-1" />
+                <FaArrowDown size={15} className="mt-1 mx-1" />
               )}
             </span>
           </h3>
@@ -73,9 +73,9 @@ function Page() {
             Surface
             <span className="transition-transform duration-400 transform">
               {isSurface ? (
-                <FaArrowUp size={15} className="mt-[10px] mx-1" />
+                <FaArrowUp size={15} className="mt-1 mx-1" />
               ) : (
-                <FaArrowDown size={15} className="mt-[10px] mx-1" />
+                <FaArrowDown size={15} className="mt-1 mx-1" />
               )}
             </span>
           </h3>
@@ -87,7 +87,7 @@ function Page() {
                   Inspect surfaces for any sign of staining, cracking or other
                   irregularities. Common sources of staining are:
                 </p>
-                <ul className="space-y-1 text-gray-500 list-disc list-inside dark:text-gray-400 mt-2">
+                <ul className="space-y-1 text-gray-500 list-disc list-inside mt-2">
                   <li>Inadequate cleaning.</li>
                   <li>Mixing dissimilar metals.</li>
                   <li>Impurities in the water.</li>
@@ -105,10 +105,10 @@ function Page() {
           )}
         </div>
       </div>
-      
+
       <ImageContent />
 
-      <div className="mt-12 px-5 lg:px-36 pb-0">
+      <div className="mt-12 px-4 md:px-8 lg:px-36 pb-0">
         {[
           {
             title: "Cold Sterilizing or Disinfecting",

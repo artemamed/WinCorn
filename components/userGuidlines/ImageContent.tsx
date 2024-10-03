@@ -5,7 +5,7 @@ import { Slide } from "react-awesome-reveal";
 
 function ImageContent() {
   return (
-    <div className="border bg-white mt-20 shadow-xl rounded-lg overflow-hidden max-w-7xl ml-[6rem] border-green-500">
+    <div className="border bg-white mt-20 shadow-xl rounded-lg overflow-hidden max-w-7xl mx-auto border-green-500">
       <div className="lg:flex lg:justify-between">
         {/* Image Section */}
         <div className="lg:w-1/2">
@@ -19,8 +19,9 @@ function ImageContent() {
             />
           </Slide>
         </div>
+
         {/* Text Section */}
-        <div className="lg:w-1/2 px-5 lg:px-10 py-10 bg-gray-50">
+        <div className="lg:w-1/2 px-4 lg:px-10 py-10 bg-gray-50">
           <Slide direction="right" duration={1100} triggerOnce>
             <h2 className="font-bold md:text-4xl sm:text-3xl my-4 text-green-600">
               Lubrication and Autoclaving
