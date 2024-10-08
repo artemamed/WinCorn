@@ -1,9 +1,9 @@
 "use client";
 import Link from "next/link";
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 import { FaShoppingCart, FaBars, FaTimes } from "react-icons/fa";
 import { FiSearch } from "react-icons/fi";
-import { BsChevronDown } from "react-icons/bs";
+import { BsChevronDown, BsChevronUp } from "react-icons/bs"; // Added BsChevronUp for toggling arrow direction
 
 const Navbar: React.FC = () => {
     const [searchQuery, setSearchQuery] = useState("");
@@ -19,21 +19,18 @@ const Navbar: React.FC = () => {
         policies: false,
     });
 
+    const productsRef = useRef<HTMLDivElement | null>(null);
+    const resourcesRef = useRef<HTMLDivElement | null>(null);
+    const policiesRef = useRef<HTMLDivElement | null>(null);
+
     const handleSearchChange = (e: React.ChangeEvent<HTMLInputElement>) => {
         setSearchQuery(e.target.value);
     };
 
-    const handleMouseEnter = (type: string) => {
+    const handleDropdownClick = (type: string) => {
         setDropdownVisible((prev) => ({
             ...prev,
-            [type]: true,
-        }));
-    };
-
-    const handleMouseLeave = (type: string) => {
-        setDropdownVisible((prev) => ({
-            ...prev,
-            [type]: false,
+            [type as keyof typeof prev]: !prev[type as keyof typeof prev],
         }));
     };
 
@@ -56,6 +53,27 @@ const Navbar: React.FC = () => {
             policies: false,
         }); // Close all dropdowns
     };
+
+    const handleClickOutside = (event: MouseEvent) => {
+        if (
+            productsRef.current && !productsRef.current.contains(event.target as Node) &&
+            resourcesRef.current && !resourcesRef.current.contains(event.target as Node) &&
+            policiesRef.current && !policiesRef.current.contains(event.target as Node)
+        ) {
+            setDropdownVisible({
+                products: false,
+                resources: false,
+                policies: false,
+            });
+        }
+    };
+
+    useEffect(() => {
+        document.addEventListener("mousedown", handleClickOutside);
+        return () => {
+            document.removeEventListener("mousedown", handleClickOutside);
+        };
+    }, []);
 
     return (
         <div className="w-full top-0 start-0 py-4 border-b z-1000 bg-white shadow-lg">
@@ -105,8 +123,8 @@ const Navbar: React.FC = () => {
                                 Sign In
                             </button>
                         </Link>
-                         {/* Register Button */}
-                         <Link href="/auth/register">
+                        {/* Register Button */}
+                        <Link href="/auth/register">
                             <button className="py-2 px-6 bg-green-500 text-white font-semibold rounded-full shadow-lg hover:bg-green-600 transition transform hover:scale-105">
                                 Register
                             </button>
@@ -114,6 +132,7 @@ const Navbar: React.FC = () => {
                     </div>
                 </div>
             </nav>
+
 
             {/* Mobile Menu */}
             {mobileMenuOpen && (
@@ -252,7 +271,7 @@ const Navbar: React.FC = () => {
             )}
 
             {/* Separator Line */}
-            <div className="hidden lg:block border-b border-gray-300 my-3" />
+            <div className="hidden lg:block border-b border-gray-300 my-4 lg:max-w-3xl xl:max-w-7xl items-center justify-center mx-auto " />
 
             {/* Desktop Navigation */}
             <nav className="hidden lg:flex items-center justify-center px-6 max-w-7xl mx-auto">
@@ -260,20 +279,15 @@ const Navbar: React.FC = () => {
                     <li>
                         <Link href="/" className="text-black">Home</Link>
                     </li>
-                    <li
-                        className="relative"
-                        onMouseEnter={() => handleMouseEnter("products")}
-                        onMouseLeave={() => handleMouseLeave("products")}
-                    >
-                        <span className="text-black cursor-pointer flex items-center">
-                            Products <BsChevronDown className="ml-1" />
-                        </span>
+                    <li className="relative">
+                        <button
+                            className="text-black cursor-pointer flex items-center"
+                            onClick={() => handleDropdownClick("products")}
+                        >
+                            Products {dropdownVisible.products ? <BsChevronUp className="ml-1" /> : <BsChevronDown className="ml-1" />}
+                        </button>
                         {dropdownVisible.products && (
-                            <div
-                                className="absolute top-8 left-0 bg-white shadow-lg rounded-lg py-2 w-[12rem] z-20"
-                                onMouseEnter={() => handleMouseEnter("products")}
-                                onMouseLeave={() => handleMouseLeave("products")}
-                            >
+                            <div className="absolute top-8 left-0 bg-white shadow-lg rounded-lg py-2 w-[12rem] z-20">
                                 <Link href="#product1" className="block px-4 py-2 hover:bg-gray-200">
                                     Product 1
                                 </Link>
@@ -286,20 +300,15 @@ const Navbar: React.FC = () => {
                             </div>
                         )}
                     </li>
-                    <li
-                        className="relative"
-                        onMouseEnter={() => handleMouseEnter("resources")}
-                        onMouseLeave={() => handleMouseLeave("resources")}
-                    >
-                        <span className="text-black cursor-pointer flex items-center">
-                            Resources <BsChevronDown className="ml-1" />
-                        </span>
+                    <li className="relative">
+                        <button
+                            className="text-black cursor-pointer flex items-center"
+                            onClick={() => handleDropdownClick("resources")}
+                        >
+                            Resources {dropdownVisible.resources ? <BsChevronUp className="ml-1" /> : <BsChevronDown className="ml-1" />}
+                        </button>
                         {dropdownVisible.resources && (
-                            <div
-                                className="absolute top-8 left-0 bg-white shadow-lg rounded-lg py-2 w-[12rem] z-20"
-                                onMouseEnter={() => handleMouseEnter("resources")}
-                                onMouseLeave={() => handleMouseLeave("resources")}
-                            >
+                            <div className="absolute top-8 left-0 bg-white shadow-lg rounded-lg py-2 w-[12rem] z-20">
                                 <Link href="/ifu" className="block px-4 py-2 hover:bg-gray-200">
                                     IFU
                                 </Link>
@@ -315,20 +324,15 @@ const Navbar: React.FC = () => {
                             </div>
                         )}
                     </li>
-                    <li
-                        className="relative"
-                        onMouseEnter={() => handleMouseEnter("policies")}
-                        onMouseLeave={() => handleMouseLeave("policies")}
-                    >
-                        <span className="text-black cursor-pointer flex items-center">
-                            Policies <BsChevronDown className="ml-1" />
-                        </span>
+                    <li className="relative">
+                        <button
+                            className="text-black cursor-pointer flex items-center"
+                            onClick={() => handleDropdownClick("policies")}
+                        >
+                            Policies {dropdownVisible.policies ? <BsChevronUp className="ml-1" /> : <BsChevronDown className="ml-1" />}
+                        </button>
                         {dropdownVisible.policies && (
-                            <div
-                                className="absolute top-8 left-0 bg-white shadow-lg rounded-lg py-2 w-[12rem] z-20"
-                                onMouseEnter={() => handleMouseEnter("policies")}
-                                onMouseLeave={() => handleMouseLeave("policies")}
-                            >
+                            <div className="absolute top-8 left-0 bg-white shadow-lg rounded-lg py-2 w-[12rem] z-20">
                                 <Link href="/terms-and-conditions" className="block px-4 py-2 hover:bg-gray-200">
                                     Terms & Conditions
                                 </Link>

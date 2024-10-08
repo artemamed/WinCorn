@@ -6,33 +6,24 @@ import grey from "@/public/images/ISO.png";
 
 const Page = () => {
   return (
-    <div className="min-h-screen px-5 lg:px-36 pt-10 pb-0 bg-gray-50">
+    <div className="min-h-screen px-5 lg:px-36 pt-10 pb-0">
       {/* Quality and Craftsmanship Section */}
       <section className="mt-10 text-lg flex flex-col items-center pb-10">
         <h2 className="text-4xl text-green-600 font-bold mb-4">
           Quality and Craftsmanship
         </h2>
         <p className="max-w-4xl text-justify leading-relaxed">
-          Artema Medical Solutions, a pioneer in crafting surgical instruments,
-          epitomizes excellence in utilizing German Grade Stainless Steel for
-          their premium medical tools. Their commitment to quality resonates
-          through their choice of material—German Grade Stainless Steel—a
-          testament to its exceptional quality level and suitability for forging
-          precise and reliable medical instruments. Renowned for its composition
-          rich in chromium, nickel, and molybdenum, this stainless steel variant
-          ensures unparalleled corrosion resistance, vital for medical tools
-          subjected to rigorous sterilization and harsh environments. Artema 
-          Medical Solutions leverages this steel&apos;s inherent strength and
-          durability, shaping it through forging processes to create surgical
-          instruments boasting superior mechanical properties: high tensile
-          strength, resilience to fatigue, and precision in intricate designs.
-          These instruments, born from the fusion of quality steel and expert
-          craftsmanship, meet the stringent demands of the medical field,
-          guaranteeing hygiene, reliability, and longevity. The utilization of
-          German Grade Stainless Steel in Artema &apos;s surgical instruments
-          underscores a commitment to excellence, offering medical professionals
-          tools of unparalleled quality and performance, ultimately contributing
-          to enhanced patient care and surgical precision.
+          Wincorn Pharmaceuticals chooses German-grade stainless steel as their premier
+          choice for developing surgical instruments. This choice of material exhibits their
+          commitment to quality and sustainability. German-grade steel is rich in
+          chromium, nickel, and molybdenum, making their instruments highly suitable for
+          surgical treatments. Its ergonomic features serve them by offering tensile
+          strength, precision, durability, reliability, and longevity. It always meets the
+          international quality standards. Their workers are hardworking and dedicated;
+          they craft every corner of an instrument with all their heart and effort. The
+          creases in their hands, the diligence in their eyes, and the unwavering dedication
+          make an instrument the way it should be felt. This quality and craftsmanship
+          make their instruments ideal for surgeons and doctors.
         </p>
       </section>
 
@@ -95,7 +86,7 @@ const Page = () => {
       {/* Footer Section */}
       <footer className="mt-20 py-6 bg-green-600 text-white text-center">
         <p className="text-sm">
-          © 2024 Artema Medical Solutions. All rights reserved.
+          © 2024 Wincorn Pharmaceuticals. All rights reserved.
         </p>
       </footer>
     </div>

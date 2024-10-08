@@ -1,5 +1,6 @@
 // import CanonicalURL from "@/components/Canonical";
 import type { Metadata } from "next";
+import React from "react";
 
 export const metadata: Metadata = {
   title: "Contact  | Surgical Tools | Surgical Instruments",
@@ -12,5 +13,5 @@ export default function ContactPageLayout({
   children: React.ReactNode;
 }) {
   return <>
-  {children}</>;
+    {children}</>;
 }

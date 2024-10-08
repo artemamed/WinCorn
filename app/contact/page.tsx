@@ -4,45 +4,48 @@ import ContactForm from "./form";
 
 export default function Contact() {
   return (
-    <div className="max-w-6xl mx-auto p-12">
-      {/* Information of the office */}
-      <div className="flex flex-col items-center text-center mb-10">
-        <h1 className="text-4xl md:text-6xl font-bold text-green-600 py-4">
-          Head Office
-        </h1>
-        <div className="flex flex-col items-center">
-          <div className="flex items-center py-2 bg-white rounded-lg shadow-md p-4 mb-4">
-            <BiMap className="w-10 h-10 text-green-500" />
-            <span className="text-gray-700 font-semibold ml-3">
-              1135 3rd Ave SW Carmel, IN 46032 USA
-            </span>
-          </div>
-          <div className="flex flex-col md:flex-row justify-center items-center space-y-5 md:space-y-0 md:space-x-10">
-            <div className="flex items-center space-x-3 bg-white rounded-lg shadow-md p-4">
-              <BsEnvelope className="w-10 h-10 text-green-500" />
-              <div className="flex flex-col text-gray-800">
-                <span className="font-bold text-lg">GENERAL ENQUIRIES</span>
-                <span className="text-sm md:text-md">
-                  chris.mattson@dynamicmed.net
-                </span>
+    <div className="container mx-auto p-6 lg:p-12">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+        {/* Office Information Section */}
+        <div className="flex flex-col justify-center items-start space-y-8 lg:ml-16">
+          <h1 className="text-3xl md:text-5xl font-extrabold text-green-600 mb-6 tracking-wide">
+            Contact Us
+          </h1>
+          <p className="text-lg md:text-xl text-gray-600">
+            We’d love to hear from you! Reach out to us via the following contact details, or use the form to get in touch.
+          </p>
+          <div className="space-y-6">
+            {/* Address */}
+            <div className="flex items-center bg-white p-5 rounded-xl shadow-lg transform hover:scale-105 transition-transform duration-300 ease-in-out">
+              <BiMap className="w-10 h-10 text-green-500" />
+              <div className="ml-6">
+                <h3 className="text-sm md:text-lg font-bold text-gray-800">Head Office</h3>
+                <p className="text-gray-700 text-xs md:text-md">1135 3rd Ave SW Carmel, IN 46032 USA</p>
               </div>
             </div>
-            <div className="flex items-center space-x-3 bg-white rounded-lg shadow-md p-4">
+
+            {/* Email */}
+            <div className="flex items-center bg-white p-5 rounded-xl shadow-lg transform hover:scale-105 transition-transform duration-300 ease-in-out">
+              <BsEnvelope className="w-10 h-10 text-green-500" />
+              <div className="ml-6">
+                <h3 className="text-sm md:text-lg font-bold text-gray-800">General Enquiries</h3>
+                <p className="text-gray-700 text-xs md:text-md">chris.mattson@dynamicmed.net</p>
+              </div>
+            </div>
+
+            {/* Phone */}
+            <div className="flex items-center bg-white p-5 rounded-xl shadow-lg transform hover:scale-105 transition-transform duration-300 ease-in-out">
               <BsTelephoneForward className="w-10 h-10 text-green-500" />
-              <div className="flex flex-col text-gray-800">
-                <span className="font-bold text-lg">TELEPHONE NUMBER</span>
-                <span className="text-sm md:text-md">+1 317 918 2825</span>
+              <div className="ml-6">
+                <h3 className="text-sm md:text-lg font-bold text-gray-800">Telephone</h3>
+                <p className="text-gray-700 text-xs md:text-md">+1 317 918 2825</p>
               </div>
             </div>
           </div>
         </div>
-      </div>
 
-      {/* Form title */}
-      
-
-      <div className="flex justify-center items-center">
-        <ContactForm />
+        {/* Contact Form Section */}
+          <ContactForm />
       </div>
     </div>
   );

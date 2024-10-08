@@ -21,13 +21,16 @@ export default function About() {
           <div className="flex flex-col lg:flex-row items-center">
             <div className="lg:flex-grow lg:w-1/2 px-5 lg:px-10">
               <h3 className="title-font sm:text-4xl text-3xl mb-4 font-bold text-green-600">
-                Message From The CEO
+                Kenneth G. Wincorn
               </h3>
-              <span className="text-xl text-black font-semibold mb-4">
-                Dear Valued Customers and Partners,
-              </span>
               <p className="mb-8 leading-7 text-lg text-gray-800">
-                I am delighted to extend my warmest greetings as the CEO of Dynamic Med Medical Solutions...
+                Kenneth G. Wincorn is the founder and C.E.O. of Wincorn Pharmaceuticals. He
+                possesses a unique blend of qualities and has a strong track record in his field.
+                After graduating from the School of Law of Southern Methodist University, he
+                established his law firm, K.G.W., P.C., in 1972. Currently, he leads a talented
+                bilingual team of legal advisors, medical professionals, and businessmen. With
+                four decades of experience, he has a remarkable ability to lead, inspire, and
+                support.
               </p>
               <div className="flex items-center mt-4">
                 <Image
@@ -38,7 +41,7 @@ export default function About() {
                   src="/images/about_us/CEO-SIGN.png"
                 />
                 <span className="text-base text-black font-semibold ml-2">
-                  Jason Boroff, CEO of Medical Solutions
+                  Kenneth G. Wincorn, CEO of Wincorn Pharmaceutical
                 </span>
               </div>
             </div>
@@ -59,10 +62,13 @@ export default function About() {
           <div className="flex flex-col lg:flex-row-reverse items-center mb-10">
             <div className="lg:flex-grow lg:w-1/2 px-5 lg:px-10">
               <h2 className="title-font sm:text-4xl text-3xl mb-4 font-bold text-green-600">
-                WinCorn Medical Vision
+                Wincorn’s Vision
               </h2>
               <p className="mb-8 leading-relaxed text-lg text-gray-800">
-                We dedicate ourselves daily to enhancing lives through exceptional technology...
+                We aim to maintain a healthy life for everyone across the globe by providing first-
+                rate pharmaceutical and surgical products. We believe everyone should have
+                access to the healthcare services they need, and we expect to increase this
+                standard in every aspect to impact the lives of as many people as possible.
               </p>
             </div>
             <div className="lg:w-1/2 mb-6 lg:mb-0">
@@ -85,7 +91,12 @@ export default function About() {
                 Our Guiding Principles
               </h1>
               <p className="mb-8 leading-relaxed text-lg text-gray-800">
-                At Dynamic Med, we are committed to making the world a better place...
+                We respect our people; their hard work and dedication are the most important
+                elements for us to build long-term and healthy relationships with our clients and
+                business associates. We always prefer environment-friendly technologies to
+                provide safe and valuable products to every patient and healthcare industry
+                globally. We always strive to maintain the quality of our products to be safe,
+                innovative, and affordable.
               </p>
             </div>
             <div className="lg:w-1/2 mb-6 lg:mb-0">

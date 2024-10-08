@@ -1,5 +1,6 @@
 "use client";
 import Image from 'next/image';
+import Link from 'next/link';
 import { useState, useEffect, useCallback } from 'react';
 import { FaChevronLeft, FaChevronRight } from 'react-icons/fa'; // Importing icons for navigation
 
@@ -88,7 +89,9 @@ export default function Carousel() {
             <p className="text-center text-gray-700 text-lg mb-6 xl:text-xl 2xl:text-2xl max-w-3xl">
                 We represent first-rate surgical instruments that provide the customers with the quality they demand, the price they can afford, and the fidelity they expect.
             </p>
+            <Link href="/blogs">
             <button className="bg-green-500 xl:px-6 xl:py-2 px-3 py-1 rounded-full text-white xl:text-lg text-sm mb-10">Explore</button>
+            </Link>
 
             {/* Carousel Container */}
             <div className="overflow-hidden w-full max-w-6xl relative" style={{ zIndex: 9 }}>
