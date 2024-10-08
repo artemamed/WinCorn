@@ -1,9 +1,10 @@
 "use client";
+
 import Link from "next/link";
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect, useRef, useCallback } from "react";
 import { FaShoppingCart, FaBars, FaTimes } from "react-icons/fa";
 import { FiSearch } from "react-icons/fi";
-import { BsChevronDown, BsChevronUp } from "react-icons/bs"; // Added BsChevronUp for toggling arrow direction
+import { BsChevronDown, BsChevronUp } from "react-icons/bs";
 
 const Navbar: React.FC = () => {
     const [searchQuery, setSearchQuery] = useState("");
@@ -19,9 +20,9 @@ const Navbar: React.FC = () => {
         policies: false,
     });
 
-    const productsRef = useRef<HTMLDivElement | null>(null);
-    const resourcesRef = useRef<HTMLDivElement | null>(null);
-    const policiesRef = useRef<HTMLDivElement | null>(null);
+    const productsRef = useRef<HTMLLIElement>(null);
+    const resourcesRef = useRef<HTMLLIElement>(null);
+    const policiesRef = useRef<HTMLLIElement>(null);
 
     const handleSearchChange = (e: React.ChangeEvent<HTMLInputElement>) => {
         setSearchQuery(e.target.value);
@@ -32,6 +33,14 @@ const Navbar: React.FC = () => {
             ...prev,
             [type as keyof typeof prev]: !prev[type as keyof typeof prev],
         }));
+    };
+
+    const closeDropdowns = () => {
+        setDropdownVisible({
+            products: false,
+            resources: false,
+            policies: false,
+        });
     };
 
     const toggleMobileMenu = () => {
@@ -46,34 +55,34 @@ const Navbar: React.FC = () => {
     };
 
     const handleLinkClick = () => {
-        setMobileMenuOpen(false); // Close mobile menu
-        setMobileDropdownVisible({
-            products: false,
-            resources: false,
-            policies: false,
-        }); // Close all dropdowns
+        setMobileMenuOpen(false);
+        closeDropdowns();
     };
 
-    const handleClickOutside = (event: MouseEvent) => {
+    const handleDropdownLinkClick = (type: string) => {
+        setDropdownVisible((prev) => ({
+            ...prev,
+            [type]: false,
+        }));
+        handleLinkClick();
+    };
+
+    const handleClickOutside = useCallback((event: MouseEvent) => {
         if (
             productsRef.current && !productsRef.current.contains(event.target as Node) &&
             resourcesRef.current && !resourcesRef.current.contains(event.target as Node) &&
             policiesRef.current && !policiesRef.current.contains(event.target as Node)
         ) {
-            setDropdownVisible({
-                products: false,
-                resources: false,
-                policies: false,
-            });
+            closeDropdowns();
         }
-    };
+    }, []);
 
     useEffect(() => {
         document.addEventListener("mousedown", handleClickOutside);
         return () => {
             document.removeEventListener("mousedown", handleClickOutside);
         };
-    }, []);
+    }, [handleClickOutside]);
 
     return (
         <div className="w-full top-0 start-0 py-4 border-b z-1000 bg-white shadow-lg">
@@ -133,11 +142,10 @@ const Navbar: React.FC = () => {
                 </div>
             </nav>
 
-
             {/* Mobile Menu */}
             {mobileMenuOpen && (
                 <div className="lg:hidden px-6 bg-white shadow-lg absolute w-full z-20">
-                    <ul className="space-y-4 mt-4 text-lg">
+                    <ul className="space-y-4 mt-4 text-lg ">
                         <li>
                             <Link href="/" className="text-black" onClick={handleLinkClick}>
                                 Home
@@ -153,17 +161,26 @@ const Navbar: React.FC = () => {
                             {mobileDropdownVisible.products && (
                                 <ul className="ml-4 mt-2 space-y-2">
                                     <li>
-                                        <Link href="#product1" className="text-black" onClick={handleLinkClick}>
+                                        <Link href="#product1" className="text-black" onClick={() => {
+                                            handleLinkClick();
+                                            toggleMobileDropdown("products");
+                                        }}>
                                             Product 1
                                         </Link>
                                     </li>
                                     <li>
-                                        <Link href="#product2" className="text-black" onClick={handleLinkClick}>
+                                        <Link href="#product2" className="text-black" onClick={() => {
+                                            handleLinkClick();
+                                            toggleMobileDropdown("products");
+                                        }}>
                                             Product 2
                                         </Link>
                                     </li>
                                     <li>
-                                        <Link href="#product3" className="text-black" onClick={handleLinkClick}>
+                                        <Link href="#product3" className="text-black" onClick={() => {
+                                            handleLinkClick();
+                                            toggleMobileDropdown("products");
+                                        }}>
                                             Product 3
                                         </Link>
                                     </li>
@@ -180,22 +197,34 @@ const Navbar: React.FC = () => {
                             {mobileDropdownVisible.resources && (
                                 <ul className="ml-4 mt-2 space-y-2">
                                     <li>
-                                        <Link href="/ifu" className="text-black" onClick={handleLinkClick}>
+                                        <Link href="/ifu" className="text-black" onClick={() => {
+                                            handleLinkClick();
+                                            toggleMobileDropdown("resources");
+                                        }}>
                                             IFU
                                         </Link>
                                     </li>
                                     <li>
-                                        <Link href="/FAQs" className="text-black" onClick={handleLinkClick}>
+                                        <Link href="/FAQs" className="text-black" onClick={() => {
+                                            handleLinkClick();
+                                            toggleMobileDropdown("resources");
+                                        }}>
                                             FAQs
                                         </Link>
                                     </li>
                                     <li>
-                                        <Link href="/blogs" className="text-black" onClick={handleLinkClick}>
+                                        <Link href="/blogs" className="text-black" onClick={() => {
+                                            handleLinkClick();
+                                            toggleMobileDropdown("resources");
+                                        }}>
                                             Blogs
                                         </Link>
                                     </li>
                                     <li>
-                                        <Link href="/certification" className="text-black" onClick={handleLinkClick}>
+                                        <Link href="/certification" className="text-black" onClick={() => {
+                                            handleLinkClick();
+                                            toggleMobileDropdown("resources");
+                                        }}>
                                             Certification
                                         </Link>
                                     </li>
@@ -217,27 +246,42 @@ const Navbar: React.FC = () => {
                             {mobileDropdownVisible.policies && (
                                 <ul className="ml-4 mt-2 space-y-2">
                                     <li>
-                                        <Link href="/terms-and-conditions" className="text-black" onClick={handleLinkClick}>
+                                        <Link href="/terms-and-conditions" className="text-black" onClick={() => {
+                                            handleLinkClick();
+                                            toggleMobileDropdown("policies");
+                                        }}>
                                             Terms & Condition
                                         </Link>
                                     </li>
                                     <li>
-                                        <Link href="/shipping-policy" className="text-black" onClick={handleLinkClick}>
+                                        <Link href="/shipping-policy" className="text-black" onClick={() => {
+                                            handleLinkClick();
+                                            toggleMobileDropdown("policies");
+                                        }}>
                                             Shipping Policy
                                         </Link>
                                     </li>
                                     <li>
-                                        <Link href="/refund-policy" className="text-black" onClick={handleLinkClick}>
+                                        <Link href="/refund-policy" className="text-black" onClick={() => {
+                                            handleLinkClick();
+                                            toggleMobileDropdown("policies");
+                                        }}>
                                             Refund Policy
                                         </Link>
                                     </li>
                                     <li>
-                                        <Link href="/cookie-policy" className="text-black" onClick={handleLinkClick}>
+                                        <Link href="/cookie-policy" className="text-black" onClick={() => {
+                                            handleLinkClick();
+                                            toggleMobileDropdown("policies");
+                                        }}>
                                             Cookies Policy
                                         </Link>
                                     </li>
                                     <li>
-                                        <Link href="/privacy-policy" className="text-black" onClick={handleLinkClick}>
+                                        <Link href="/privacy-policy" className="text-black" onClick={() => {
+                                            handleLinkClick();
+                                            toggleMobileDropdown("policies");
+                                        }}>
                                             Privacy Policy
                                         </Link>
                                     </li>
@@ -279,7 +323,7 @@ const Navbar: React.FC = () => {
                     <li>
                         <Link href="/" className="text-black">Home</Link>
                     </li>
-                    <li className="relative">
+                    <li className="relative" ref={productsRef}>
                         <button
                             className="text-black cursor-pointer flex items-center"
                             onClick={() => handleDropdownClick("products")}
@@ -288,19 +332,19 @@ const Navbar: React.FC = () => {
                         </button>
                         {dropdownVisible.products && (
                             <div className="absolute top-8 left-0 bg-white shadow-lg rounded-lg py-2 w-[12rem] z-20">
-                                <Link href="#product1" className="block px-4 py-2 hover:bg-gray-200">
+                                <Link href="#product1" className="block px-4 py-2 hover:bg-gray-200" onClick={() => handleDropdownLinkClick("products")}>
                                     Product 1
                                 </Link>
-                                <Link href="#product2" className="block px-4 py-2 hover:bg-gray-200">
+                                <Link href="#product2" className="block px-4 py-2 hover:bg-gray-200" onClick={() => handleDropdownLinkClick("products")}>
                                     Product 2
                                 </Link>
-                                <Link href="#product3" className="block px-4 py-2 hover:bg-gray-200">
+                                <Link href="#product3" className="block px-4 py-2 hover:bg-gray-200" onClick={() => handleDropdownLinkClick("products")}>
                                     Product 3
                                 </Link>
                             </div>
                         )}
                     </li>
-                    <li className="relative">
+                    <li className="relative" ref={resourcesRef}>
                         <button
                             className="text-black cursor-pointer flex items-center"
                             onClick={() => handleDropdownClick("resources")}
@@ -309,22 +353,22 @@ const Navbar: React.FC = () => {
                         </button>
                         {dropdownVisible.resources && (
                             <div className="absolute top-8 left-0 bg-white shadow-lg rounded-lg py-2 w-[12rem] z-20">
-                                <Link href="/ifu" className="block px-4 py-2 hover:bg-gray-200">
+                                <Link href="/ifu" className="block px-4 py-2 hover:bg-gray-200" onClick={() => handleDropdownLinkClick("resources")}>
                                     IFU
                                 </Link>
-                                <Link href="/FAQs" className="block px-4 py-2 hover:bg-gray-200">
+                                <Link href="/FAQs" className="block px-4 py-2 hover:bg-gray-200" onClick={() => handleDropdownLinkClick("resources")}>
                                     FAQs
                                 </Link>
-                                <Link href="/blogs" className="block px-4 py-2 hover:bg-gray-200">
+                                <Link href="/blogs" className="block px-4 py-2 hover:bg-gray-200" onClick={() => handleDropdownLinkClick("resources")}>
                                     Blogs
                                 </Link>
-                                <Link href="/certification" className="block px-4 py-2 hover:bg-gray-200">
+                                <Link href="/certification" className="block px-4 py-2 hover:bg-gray-200" onClick={() => handleDropdownLinkClick("resources")}>
                                     Certification
                                 </Link>
                             </div>
                         )}
                     </li>
-                    <li className="relative">
+                    <li className="relative" ref={policiesRef}>
                         <button
                             className="text-black cursor-pointer flex items-center"
                             onClick={() => handleDropdownClick("policies")}
@@ -333,19 +377,19 @@ const Navbar: React.FC = () => {
                         </button>
                         {dropdownVisible.policies && (
                             <div className="absolute top-8 left-0 bg-white shadow-lg rounded-lg py-2 w-[12rem] z-20">
-                                <Link href="/terms-and-conditions" className="block px-4 py-2 hover:bg-gray-200">
+                                <Link href="/terms-and-conditions" className="block px-4 py-2 hover:bg-gray-200" onClick={() => handleDropdownLinkClick("policies")}>
                                     Terms & Conditions
                                 </Link>
-                                <Link href="/shipping-policy" className="block px-4 py-2 hover:bg-gray-200">
+                                <Link href="/shipping-policy" className="block px-4 py-2 hover:bg-gray-200" onClick={() => handleDropdownLinkClick("policies")}>
                                     Shipping Policy
                                 </Link>
-                                <Link href="/refund-policy" className="block px-4 py-2 hover:bg-gray-200">
+                                <Link href="/refund-policy" className="block px-4 py-2 hover:bg-gray-200" onClick={() => handleDropdownLinkClick("policies")}>
                                     Refund Policy
                                 </Link>
-                                <Link href="/cookie-policy" className="block px-4 py-2 hover:bg-gray-200">
+                                <Link href="/cookie-policy" className="block px-4 py-2 hover:bg-gray-200" onClick={() => handleDropdownLinkClick("policies")}>
                                     Cookies Policy
                                 </Link>
-                                <Link href="/privacy-policy" className="block px-4 py-2 hover:bg-gray-200">
+                                <Link href="/privacy-policy" className="block px-4 py-2 hover:bg-gray-200" onClick={() => handleDropdownLinkClick("policies")}>
                                     Privacy Policy
                                 </Link>
                             </div>
