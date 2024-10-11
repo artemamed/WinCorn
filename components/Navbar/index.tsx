@@ -151,7 +151,7 @@ const Navbar: React.FC = () => {
                                 Home
                             </Link>
                         </li>
-                        <li>
+                        {/* <li>
                             <button
                                 onClick={() => toggleMobileDropdown("products")}
                                 className="flex items-center justify-between w-full text-left text-black"
@@ -186,7 +186,7 @@ const Navbar: React.FC = () => {
                                     </li>
                                 </ul>
                             )}
-                        </li>
+                        </li> */}
                         <li>
                             <button
                                 onClick={() => toggleMobileDropdown("resources")}
@@ -323,7 +323,7 @@ const Navbar: React.FC = () => {
                     <li>
                         <Link href="/" className="text-black">Home</Link>
                     </li>
-                    <li className="relative" ref={productsRef}>
+                    {/* <li className="relative" ref={productsRef}>
                         <button
                             className="text-black cursor-pointer flex items-center"
                             onClick={() => handleDropdownClick("products")}
@@ -343,7 +343,7 @@ const Navbar: React.FC = () => {
                                 </Link>
                             </div>
                         )}
-                    </li>
+                    </li> */}
                     <li className="relative" ref={resourcesRef}>
                         <button
                             className="text-black cursor-pointer flex items-center"
