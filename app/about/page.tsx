@@ -33,13 +33,13 @@ export default function About() {
                 support.
               </p>
               <div className="flex items-center mt-4">
-                <Image
+                {/* <Image
                   width={64}
                   height={64}
                   alt="signature"
                   className="h-16 w-auto object-cover object-center inline-block"
                   src="/images/about_us/CEO-SIGN.png"
-                />
+                /> */}
                 <span className="text-base text-black font-semibold ml-2">
                   Kenneth G. Wincorn, CEO of Wincorn Pharmaceutical
                 </span>
@@ -51,7 +51,7 @@ export default function About() {
                 height={400}
                 className="object-cover object-center rounded-lg shadow-lg transition-transform duration-500 hover:scale-105 border border-green-300"
                 alt="Jason Boroff"
-                src="/images/about_us/CEO-Artema1.jpeg"
+                src="/images/about1.jpg"
               />
             </div>
           </div>

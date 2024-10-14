@@ -212,14 +212,14 @@ const Navbar: React.FC = () => {
                                             FAQs
                                         </Link>
                                     </li>
-                                    <li>
+                                    {/* <li>
                                         <Link href="/blogs" className="text-black" onClick={() => {
                                             handleLinkClick();
                                             toggleMobileDropdown("resources");
                                         }}>
                                             Blogs
                                         </Link>
-                                    </li>
+                                    </li> */}
                                     <li>
                                         <Link href="/certification" className="text-black" onClick={() => {
                                             handleLinkClick();
@@ -359,9 +359,9 @@ const Navbar: React.FC = () => {
                                 <Link href="/FAQs" className="block px-4 py-2 hover:bg-gray-200" onClick={() => handleDropdownLinkClick("resources")}>
                                     FAQs
                                 </Link>
-                                <Link href="/blogs" className="block px-4 py-2 hover:bg-gray-200" onClick={() => handleDropdownLinkClick("resources")}>
+                                {/* <Link href="/blogs" className="block px-4 py-2 hover:bg-gray-200" onClick={() => handleDropdownLinkClick("resources")}>
                                     Blogs
-                                </Link>
+                                </Link> */}
                                 <Link href="/certification" className="block px-4 py-2 hover:bg-gray-200" onClick={() => handleDropdownLinkClick("resources")}>
                                     Certification
                                 </Link>
