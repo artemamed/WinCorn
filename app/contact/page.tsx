@@ -4,7 +4,7 @@ import ContactForm from "./form";
 
 export default function Contact() {
   return (
-    <div className="container mx-auto p-6 lg:p-12">
+    <div className="container mx-auto p-6">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
         {/* Office Information Section */}
         <div className="flex flex-col justify-center items-start space-y-8 lg:ml-16">

@@ -82,7 +82,7 @@ export default function Carousel() {
     };
 
     return (
-        <div className="relative flex flex-col items-center justify-center p-[1rem] lg:p-[5rem] xl:p-[5rem]" style={{ zIndex: 10 }}>
+        <div className="relative flex flex-col items-center justify-center p-[1rem] lg:p-[1rem] xl:p-[2rem]" style={{ zIndex: 10 }}>
             <div className="text-3xl font-medium text-gray-800 xl:text-6xl lg:text-5xl md:text-3xl">
                 Welcome to <span className="text-green-500">WinCorn Pharmaceuticals</span>
             </div>

@@ -5,6 +5,7 @@ import { useState, useEffect, useRef, useCallback } from "react";
 import { FaShoppingCart, FaBars, FaTimes } from "react-icons/fa";
 import { FiSearch } from "react-icons/fi";
 import { BsChevronDown, BsChevronUp } from "react-icons/bs";
+import Image from "next/image";
 
 const Navbar: React.FC = () => {
     const [searchQuery, setSearchQuery] = useState("");
@@ -89,8 +90,17 @@ const Navbar: React.FC = () => {
             <nav className="flex items-center justify-between px-6 max-w-7xl mx-auto">
                 {/* Logo */}
                 <div className="text-3xl font-bold text-black transition-transform transform hover:scale-105">
-                    Win<span className="text-green-500">Corn</span>
+                    {/* Win<span className="text-green-500">Corn</span> */}
+                    <Image
+                        src="/wincorn/WinCorn.png"
+                        alt="WinCorn"
+                        width={300} // You can adjust the width
+                        height={300} // You can adjust the height
+                        className="-mt-[7rem] -mb-[7rem] -ml-[3rem]"
+                    />
                 </div>
+
+
 
                 {/* Hamburger Menu for Mobile */}
                 <div className="lg:hidden flex items-center">
