@@ -38,13 +38,13 @@ export default function Footer() {
         <div className="w-full md:w-1/4 mb-6 text-center md:text-left">
           <h4 className="text-xl font-bold">Contact Us</h4>
           <p className="flex items-center justify-center md:justify-start text-gray-300 mt-2">
-            <FaMapMarkerAlt className="mr-2" /> 123, London Bridge Street, London
+            <FaMapMarkerAlt className="mr-2" /> 100 N Central Expy Suite 1310 Chase Bank Building Richardson, TX 75080, KGW Law
           </p>
           <p className="flex items-center justify-center md:justify-start text-gray-300 mt-2">
-            <FaEnvelope className="mr-2" /> support@care.com
+            <FaEnvelope className="mr-2" /> info@kgwlawfirm.com
           </p>
           <p className="flex items-center justify-center md:justify-start text-gray-300 mt-2">
-            <FaPhone className="mr-2" /> (+012) 3456 789
+            <FaPhone className="mr-2" /> +1 214-630-1221
           </p>
         </div>
       </div>

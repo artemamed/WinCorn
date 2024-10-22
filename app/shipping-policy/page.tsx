@@ -109,7 +109,7 @@ const ShippingPolicy: React.FC = () => {
             For any questions or concerns, please reach out to us at: <br />
             Email:{" "}
             <a href="mailto:sales@wincornpharma.com" className="text-blue-500 underline">
-              sales@wincornpharma.com
+              info@kgwlawfirm.com
             </a>
           </p>
         </div>

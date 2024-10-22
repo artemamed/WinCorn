@@ -103,10 +103,10 @@ const PrivacyPolicy = () => {
               href="mailto:sales@artemamed.com"
               className="text-green-500 hover:underline"
             >
-              sales@artemamed.com
+              info@kgwlawfirm.com
             </a>
             <br />
-            +(92)4232361469
+            +1 214-630-1221
           </p>
         </footer>
       </div>

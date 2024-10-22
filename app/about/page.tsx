@@ -47,10 +47,10 @@ export default function About() {
             </div>
             <div className="lg:w-1/2 mb-10 lg:mb-0 px-5 lg:px-10">
               <Image
-                width={400}
-                height={400}
+                width={700}
+                height={700}
                 className="object-cover object-center rounded-lg shadow-lg transition-transform duration-500 hover:scale-105 border border-green-300"
-                alt="Jason Boroff"
+                alt="Guiding Principles"
                 src="/images/about1.jpg"
               />
             </div>
@@ -76,8 +76,8 @@ export default function About() {
                 width={700}
                 height={700}
                 className="object-cover object-center rounded-lg shadow-lg transition-transform duration-500 hover:scale-105 border border-green-300"
-                alt="Dynamic Med Vision"
-                src="/images/about_us/services.png"
+                alt="Guiding Principles"
+                src="/images/about1.jpg"
               />
             </div>
           </div>
