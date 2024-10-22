@@ -38,7 +38,7 @@ export default function Footer() {
         <div className="w-full md:w-1/4 mb-6 text-center md:text-left">
           <h4 className="text-xl font-bold">Contact Us</h4>
           <p className="flex items-center justify-center md:justify-start text-gray-300 mt-2">
-            <FaMapMarkerAlt className="mr-2" /> 100 N Central Expy Suite 1310 Chase Bank Building Richardson, TX 75080, KGW Law
+            <FaMapMarkerAlt className="mr-2 h-8 w-8" /> 100 N Central Expy Suite 1310 Chase Bank Building Richardson, TX 75080, KGW Law
           </p>
           <p className="flex items-center justify-center md:justify-start text-gray-300 mt-2">
             <FaEnvelope className="mr-2" /> info@kgwlawfirm.com
