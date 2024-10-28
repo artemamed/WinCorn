@@ -1,70 +1,60 @@
-import { Description } from "@radix-ui/react-dialog"
 
 export const guidelinesArray=[
     {
-        heading:" Artema Instrument Care & Cleaning Instructions",
+        heading:" Wincorn Instrument Care & Cleaning Instructions",
         link:"/userGuidelines/Instruments%20Care.pdf"
     },
     {
-        heading:"Recommendations for Decontamination and Sterilization of Artema Medical Instruments",
+        heading:"Recommendations for Decontamination and Sterilization of Wincorn Medical Instruments",
         link:"/userGuidelines/Sterilization Parameters.pdf"
     },
     {
-        heading:" Artema Medical Spinal Punches IFU",
+        heading:" Wincorn Medical Spinal Punches IFU",
         link:"/userGuidelines/Spinal Punches IFU.pdf"
     },
     {
-        heading:" Artema Medical Aluminum Hand IFU",
+        heading:" Wincorn Medical Aluminum Hand IFU",
         link:"/userGuidelines/Aluminum hand.pdf"
     },
     {
-        heading:" Artema Medical Reusable Surgical Instruments with Silicone Handles IFU",
+        heading:" Wincorn Medical Reusable Surgical Instruments with Silicone Handles IFU",
         link:"/userGuidelines/ifu_silicone_handle-1.pdf"
     },
     {
-        heading:" Artema Medical Wire Guides with Extension IFU",
+        heading:" Wincorn Medical Wire Guides with Extension IFU",
         link:"/userGuidelines/Wire_Guides_with_Extension.pdf"
     },
     {
-        heading:"  Artema Medical Reusable Surgical Instruments – English",
+        heading:"  Wincorn Medical Reusable Surgical Instruments",
         link:"/userGuidelines/IFU_-_RSI.C-ENG.pdf"
     },
 ]
 
 export const contentPG=[{
     heading:"Ultrasonic Cleaning",
-    Description:"Ultrasonic cleaning is the most effective and efficient way to clean instruments. To maximize its effectiveness, instruments should be cleaned of all visible debris before they are placed in an ultrasonic cleaner.",
-    listDesc:"When using ultrasonic cleaners:",
+    Description:"The purpose of ultrasonic cleaning is to clean inaccessible points of contamination that cannot be removed by using other technologies such as turbulence, agitation, spray washing, brushing, and many more.",
+    listDesc:"This technique places the instrument in an ultrasonic liquid tank, and high-frequency sound waves are applied to remove contamination. For effective use, the following guidelines should be followed:",
     contentList:[
         {
-            list:"Do not mix dissimilar metals, e.g. chrome and stainless, in the same cycle.",
+            list:"Do not use different materials for the same cycle.",
         },
         {
-            list:"Use only designated cleaners.",
+            list:"Do not pile instruments on top of one another.",
         },
         {
-            list:"Open all instruments so ratchets and box locks are accessible.",
+            list:"Rinse the instrument immediately after cleansing it.",
         },
         {
-            list:"Whenever possible, disassemble instruments for optimal cleaning.",
+            list:"Air-dry the instrument after the procedure.",
         },
         {
-            list:"Avoid piling instruments on top of each other.",
+            list:"Lubricate the moving parts after cleansing.",
         },
         {
-            list:"Remove and rinse off instruments immediately after the cycle is finished.",
+            list:"The cleaning time should be from 3 to 6 minutes, but it may vary.",
         },
         {
-            list:"Allow instruments to air-dry.",
-        },
-        {
-            list:"Lubricate all moving parts after cleaning and before sterilization.",
-        },
-        {
-            list:"Use only lubricants specifically designed for surgical instruments.",
-        },
-        {
-            list:"Change the ultrasonic cleaning solution daily."
+            list:"The temperature should be high, ranging from 135 to 150 degrees Fahrenheit.",
         }
     ]
 }]

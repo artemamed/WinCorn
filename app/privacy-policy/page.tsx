@@ -10,7 +10,7 @@ const PrivacyPolicy = () => {
           Privacy Policy
         </h1>
         <p className="mb-4 text-gray-700">
-          At Wincorn Pharmaceuticals, we are committed to protecting your privacy. This Privacy Policy explains how we collect, use, disclose, and protect your information when you visit our website{" "}
+          At Wincorn Medical, we are committed to protecting your privacy. This Privacy Policy explains how we collect, use, disclose, and protect your information when you visit our website{" "}
           <a href="https://artemamed.com/" className="text-green-500 hover:underline">https://artemamed.com/</a> and interact with our products and services.
         </p>
 

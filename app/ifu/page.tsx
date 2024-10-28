@@ -111,19 +111,19 @@ function Page() {
       <div className="mt-12 px-4 md:px-8 lg:px-36 pb-0">
         {[
           {
-            title: "Cold Sterilizing or Disinfecting",
+            title: "Cold Sterilizing:",
             content:
-              "Prolonged immersion in disinfecting or sterilizing solution can damage surgical instruments. Do not soak instruments for longer than 20 minutes. To render the instruments sterile and ready for use, we recommend using an autoclave.",
+              "In this method, the instruments are immersed in a chemical solution to achieve sterilization. They are designed explicitly for heat-sensitive instruments but cannot compete with the level of sterilization provided by the heat sterilization technique.",
           },
           {
-            title: "Avoid BAC",
+            title: "Avoid BAC and Bleach:",
             content:
-              "Tools made of tungsten carbide, like wire cutters, needle holders, and TC scissors, should avoid contact with sterilizing solutions containing benzyl ammonium chloride (BAC). BAC has the potential to weaken and break down tungsten carbide. Additionally, refrain from using bleach as it can lead to significant surface damage.",
+              "BAC stands for Benzyl Ammonium Chloride present in sterilizing solutions. It can damage surgical tools made from tungsten carbide, like needle holders, wire cutters, and T.C. scissors. The high pH of bleach is also very dangerous for surgical instruments made of stainless steel. The acidic solution can corrode the instrument and can cause pitting.",
           },
           {
             title: "Storage",
             content:
-              "After ensuring instruments are completely dry, keep them in a tidy, dry setting. Avoid placing them in locations where chemicals might release damaging fumes or where fluctuations in temperature and humidity could lead to moisture buildup on the instruments.",
+              "The instruments should be completely dry after applying any sterilization technique. They should be placed in a dry place and at room temperature (high temperatures may damage them).",
           },
         ].map((section, index) => (
           <div className="pb-6" key={index}>

@@ -10,7 +10,7 @@ export default function Footer() {
             Win<span className="text-green-400">Corn Pharmaceuticals</span>
           </h3>
           <p className="text-gray-300 mt-2">
-            Wincorn Pharmaceuticals provides novel medicines and surgical instruments to everyone worldwide, ensuring safety, precision, and quality.
+          Wincorn Medical provides surgical products and services to everyone worldwide, ensuring safety, precision, and quality.
           </p>
         </div>
 

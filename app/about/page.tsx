@@ -24,7 +24,7 @@ export default function About() {
                 Kenneth G. Wincorn
               </h3>
               <p className="mb-8 leading-7 text-lg text-gray-800">
-                Kenneth G. Wincorn is the founder and C.E.O. of Wincorn Pharmaceuticals. He
+                Kenneth G. Wincorn is the founder and C.E.O. of Wincorn Medical. He
                 possesses a unique blend of qualities and has a strong track record in his field.
                 After graduating from the School of Law of Southern Methodist University, he
                 established his law firm, K.G.W., P.C., in 1972. Currently, he leads a talented

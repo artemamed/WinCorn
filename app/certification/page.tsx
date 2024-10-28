@@ -13,7 +13,7 @@ const Page = () => {
           Quality and Craftsmanship
         </h2>
         <p className="max-w-4xl text-justify leading-relaxed">
-          Wincorn Pharmaceuticals chooses German-grade stainless steel as their premier
+          Wincorn Medical chooses German-grade stainless steel as their premier
           choice for developing surgical instruments. This choice of material exhibits their
           commitment to quality and sustainability. German-grade steel is rich in
           chromium, nickel, and molybdenum, making their instruments highly suitable for
@@ -86,7 +86,7 @@ const Page = () => {
       {/* Footer Section */}
       <footer className="mt-20 py-6 bg-green-600 text-white text-center">
         <p className="text-sm">
-          © 2024 Wincorn Pharmaceuticals. All rights reserved.
+          © 2024 Wincorn Medical. All rights reserved.
         </p>
       </footer>
     </div>

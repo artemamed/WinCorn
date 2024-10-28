@@ -12,7 +12,7 @@ const TermsAndConditions: React.FC = () => {
         <div className="text-lg leading-relaxed text-gray-700">
           <h2 className="text-2xl font-semibold text-green-500 mb-3">General:</h2>
           <p className="mb-6">
-            All products and services of Wincorn Pharmaceuticals are exclusively subject to the following terms and
+            All products and services of Wincorn Medical are exclusively subject to the following terms and
             conditions. If the customer’s terms and conditions differ from these, they will not be accepted.
           </p>
 
@@ -29,7 +29,7 @@ const TermsAndConditions: React.FC = () => {
             <li className="flex items-start">
               <span className="mr-3 text-green-500">✔</span>
               <p>
-                Wincorn Pharmaceuticals is not responsible for any mistake or negligence regarding the
+                Wincorn Medical is not responsible for any mistake or negligence regarding the
                 information provided by the customer.
               </p>
             </li>

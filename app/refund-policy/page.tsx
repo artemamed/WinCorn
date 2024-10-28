@@ -11,7 +11,7 @@ const RefundPolicy: React.FC = () => {
         </h1>
 
         <p className="text-lg leading-relaxed text-gray-700 mb-8">
-          At <strong>Wincorn Pharmaceuticals</strong>, If, we are committed to providing high-quality surgical instruments. If you are
+          At <strong>Wincorn Medical</strong>, If, we are committed to providing high-quality surgical instruments. If you are
           not completely satisfied with your purchase, we offer a refund policy to ensure your confidence in our
           products.
         </p>
@@ -92,7 +92,7 @@ const RefundPolicy: React.FC = () => {
             <h2 className="text-2xl font-bold text-gray-800">Non-Refundable Items:</h2>
           </div>
           <p className="text-gray-700 leading-relaxed">
-            Wincorn Pharmaceuticals reserves the right to modify this refund policy at any time. Changes will be
+            Wincorn Medical reserves the right to modify this refund policy at any time. Changes will be
             posted on our website, and the revised policy will apply to all purchases made after the effective date.
 
           </p>

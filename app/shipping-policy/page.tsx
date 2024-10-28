@@ -11,7 +11,7 @@ const ShippingPolicy: React.FC = () => {
         </h1>
 
         <p className="text-lg leading-relaxed text-gray-700 mb-8">
-          At Wincorn Pharmaceuticals, we strive to provide timely and reliable shipping for our surgical
+          At Wincorn Medical, we strive to provide timely and reliable shipping for our surgical
           instruments and pharmaceutical products. Below are the details of our shipping policy.
         </p>
 
@@ -94,7 +94,7 @@ const ShippingPolicy: React.FC = () => {
             <h3 className="text-2xl font-bold text-gray-800"> POLICY MODIFICATIONS</h3>
           </div>
           <p className="text-gray-700 leading-relaxed">
-            Wincorn Pharmaceuticals reserves the right to modify this shipping policy at any time. Any changes will
+            Wincorn Medical reserves the right to modify this shipping policy at any time. Any changes will
             be posted on our website, and the revised policy will apply to all orders placed after the effective date.
           </p>
         </div>
@@ -117,7 +117,7 @@ const ShippingPolicy: React.FC = () => {
 
       {/* Footer */}
       <footer className="mt-10 text-center text-gray-600">
-        <p>© 2024 Wincorn Pharmaceuticals. All rights reserved.</p>
+        <p>© 2024 Wincorn Medical. All rights reserved.</p>
       </footer>
     </div>
   );

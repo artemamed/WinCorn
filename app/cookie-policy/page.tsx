@@ -11,7 +11,7 @@ const CookiePolicyPage: React.FC = () => {
         </h1>
 
         <p className="text-gray-700 leading-relaxed mb-8">
-          At Wincorn Pharmaceuticals, we are committed to protecting your privacy. This Cookie Policy explains how we use cookies and similar technologies on our website (<a href="https://artemamed.com/" className="text-green-500 hover:underline">https://artemamed.com/</a>).
+          At Wincorn Medical, we are committed to protecting your privacy. This Cookie Policy explains how we use cookies and similar technologies on our website (<a href="https://artemamed.com/" className="text-green-500 hover:underline">https://artemamed.com/</a>).
         </p>
 
         <section className="mb-12">
@@ -100,7 +100,7 @@ const CookiePolicyPage: React.FC = () => {
 
       {/* Footer */}
       <footer className="mt-12 text-center text-gray-500">
-        <p>© 2024 Wincorn Pharmaceuticals. All rights reserved.</p>
+        <p>© 2024 Wincorn Medical. All rights reserved.</p>
       </footer>
     </div>
   );

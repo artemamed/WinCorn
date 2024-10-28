@@ -36,7 +36,7 @@ function ContentImage() {
         <div className="lg:w-1/2">
           <Slide duration={1200} direction="right" triggerOnce>
             <Image
-              src="/images/parallax/2.jpg"
+              src="/images/ultrasonic.jpg"
               alt="Surgical instruments"
               height={1500}
               width={2000}
