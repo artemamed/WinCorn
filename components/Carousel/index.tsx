@@ -83,18 +83,19 @@ export default function Carousel() {
 
     return (
         <div className="relative flex flex-col items-center justify-center p-[1rem] lg:p-[1rem] xl:p-[2rem]" style={{ zIndex: 10 }}>
-            <div className="text-3xl font-medium text-gray-800 xl:text-6xl lg:text-5xl md:text-3xl">
-                Welcome to <span className="text-green-500">WinCorn Pharmaceuticals</span>
+            <div className="text-2xl font-medium text-gray-800 xl:text-6xl lg:text-5xl md:text-3xl">
+                Welcome to <span className="text-green-500">WinCorn Medical</span>
             </div>
+            <br />
             <p className="text-center text-gray-700 text-lg mb-6 xl:text-xl 2xl:text-2xl max-w-3xl">
                 We represent first-rate surgical instruments that provide the customers with the quality they demand, the price they can afford, and the fidelity they expect.
             </p>
             <Link href="/blogs">
-            <button className="bg-green-500 xl:px-6 xl:py-2 px-3 py-1 rounded-full text-white xl:text-lg text-sm mb-10">Explore</button>
+            <button className="bg-green-500 xl:px-6 xl:py-2 px-3 py-1 rounded-full text-white xl:text-lg text-sm mb-2">Explore</button>
             </Link>
 
             {/* Carousel Container */}
-            <div className="overflow-hidden w-full max-w-6xl relative" style={{ zIndex: 9 }}>
+            <div className="overflow-hidden w-full max-w-6xl relative rounded-2xl" style={{ zIndex: 9 }}>
                 {/* Show full images on small screens */}
                 <div className="md:hidden relative w-full h-64">
                     {slides.map((slide, index) => (

@@ -6,16 +6,16 @@ export default function Footer() {
     <footer className="bg-gray-800 py-10 text-white">
       <div className="max-w-6xl mx-auto flex flex-col md:flex-row justify-between xl:space-x-[1rem]">
         <div className="w-full md:w-1/3 mb-6 text-center md:text-left xl:-ml-[5rem] xl:mr-[5rem] md:pl-2">
-          <h3 className="text-3xl font-semibold">
+          <h3 className="text-xl md:text-3xl font-semibold">
             Win<span className="text-green-400">Corn Pharmaceuticals</span>
           </h3>
-          <p className="text-gray-300 mt-2">
+          <p className="text-gray-300 mt-2 text-sm md:text-lg">
           Wincorn Medical provides surgical products and services to everyone worldwide, ensuring safety, precision, and quality.
           </p>
         </div>
 
         <div className="w-full md:w-1/6 mb-6 text-center md:text-left">
-          <h4 className="text-xl font-bold">About Us</h4>
+          <h4 className="text-lg md:text-xl font-bold">About Us</h4>
           <ul className="text-gray-300 space-y-2">
             <li className="hover:text-green-400 transition duration-300 cursor-pointer"><Link href="/">Home</Link></li>
             <li className="hover:text-green-400 transition duration-300 cursor-pointer"><Link href="/about">About Us</Link></li>
@@ -25,7 +25,7 @@ export default function Footer() {
         </div>
 
         <div className="w-full md:w-1/6 mb-6 text-center md:text-left">
-          <h4 className="text-xl font-bold">Policies</h4>
+          <h4 className="text-lg md:text-xl font-bold">Policies</h4>
           <ul className="text-gray-300 space-y-2">
             <li className="hover:text-green-400 transition duration-300 cursor-pointer"><Link href="/terms-and-conditions">Terms & Condition</Link></li>
             <li className="hover:text-green-400 transition duration-300 cursor-pointer"><Link href="/shipping-policy">Shipping Policy</Link></li>
@@ -36,7 +36,7 @@ export default function Footer() {
         </div>
 
         <div className="w-full md:w-1/4 mb-6 text-center md:text-left">
-          <h4 className="text-xl font-bold">Contact Us</h4>
+          <h4 className="text-lg md:text-xl font-bold">Contact Us</h4>
           <p className="flex items-center justify-center md:justify-start text-gray-300 mt-2">
             <FaMapMarkerAlt className="mr-2 h-8 w-8" /> 100 N Central Expy Suite 1310 Chase Bank Building Richardson, TX 75080, KGW Law
           </p>

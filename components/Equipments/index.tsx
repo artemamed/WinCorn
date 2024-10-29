@@ -21,7 +21,7 @@ const Equipments = () => {
             alt: "Needle Holders",
             title: "Needle Holder",
             description:
-                "A variety of needle holders are manufactured by Wincorn Pharmaceuticals. They are well-known for their ergonomic design and affordable price range.",
+                "A variety of needle holders are manufactured by WinCorn Medical. They are well-known for their ergonomic design and affordable price range.",
         },
         {
             href: "https://www.dynamicmedicalsolution.com/products/needle-holders",
@@ -29,7 +29,7 @@ const Equipments = () => {
             alt: "Dental Instruments",
             title: "Dental Instruments",
             description:
-                "Wincorn Pharmaceuticals holds special importance for its dental instruments, including pushers, pliers, explorers, elevators, etc.",
+                "WinCorn Medical holds special importance for its dental instruments, including pushers, pliers, explorers, elevators, etc.",
         },
         {
             href: "https://www.dynamicmedicalsolution.com/products/scissors",
