@@ -88,10 +88,10 @@ export default function Carousel() {
             </div>
             <br />
             <p className="text-center text-gray-700 text-lg mb-6 xl:text-xl 2xl:text-2xl max-w-3xl">
-                We represent first-rate surgical instruments that provide the customers with the quality they demand, the price they can afford, and the fidelity they expect.
+                We deliver premium surgical instruments that meet the highest standards of quality, offer exceptional value, and provide the reliability our customers expect.
             </p>
             <Link href="/blogs">
-            <button className="bg-green-500 xl:px-6 xl:py-2 px-3 py-1 rounded-full text-white xl:text-lg text-sm mb-2">Explore</button>
+                <button className="bg-green-500 xl:px-6 xl:py-2 px-3 py-1 rounded-full text-white xl:text-lg text-sm mb-2">Explore</button>
             </Link>
 
             {/* Carousel Container */}
@@ -100,7 +100,7 @@ export default function Carousel() {
                 <div className="md:hidden relative w-full h-64">
                     {slides.map((slide, index) => (
                         <div key={index} className={`absolute inset-0 transition-opacity duration-1000 ${currentSlide === index ? 'opacity-100' : 'opacity-0'}`}>
-                            <Image src={slide.image} alt={`Slide ${index + 1}`} fill style={{ objectFit: 'cover' }}  />
+                            <Image src={slide.image} alt={`Slide ${index + 1}`} fill style={{ objectFit: 'cover' }} />
                         </div>
                     ))}
                     {/* Navigation buttons */}

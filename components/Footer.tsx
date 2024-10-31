@@ -7,7 +7,7 @@ export default function Footer() {
       <div className="max-w-6xl mx-auto flex flex-col md:flex-row justify-between xl:space-x-[1rem]">
         <div className="w-full md:w-1/3 mb-6 text-center md:text-left xl:-ml-[5rem] xl:mr-[5rem] md:pl-2">
           <h3 className="text-xl md:text-3xl font-semibold">
-            Win<span className="text-green-400">Corn Pharmaceuticals</span>
+            Win<span className="text-green-400">Corn Medical</span>
           </h3>
           <p className="text-gray-300 mt-2 text-sm md:text-lg">
           Wincorn Medical provides surgical products and services to everyone worldwide, ensuring safety, precision, and quality.

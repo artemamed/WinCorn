@@ -3,7 +3,7 @@ import { dummytestominal } from "@/constant/Testominals";
 import React from "react";
 import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
-import { FaQuoteLeft, FaUserCircle } from 'react-icons/fa'; // Import icons
+import { FaQuoteLeft } from 'react-icons/fa'; // Import icons
 
 const Testimonials = () => {
   return (
@@ -35,7 +35,7 @@ const Testimonials = () => {
                     </p>
                   </blockquote>
                   <figcaption className="flex items-center justify-center mt-6 space-x-3">
-                    <FaUserCircle className="text-gray-500" size={40} />
+                    {/* <FaUserCircle className="text-gray-500" size={40} /> */}
                     <div className="text-lg sm:text-xl font-bold text-gray-900">
                       {testominal.user.name}
                     </div>

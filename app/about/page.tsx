@@ -66,9 +66,9 @@ export default function About() {
               </h2>
               <p className="mb-8 leading-relaxed text-lg text-gray-800">
                 We aim to maintain a healthy life for everyone across the globe by providing first-
-                rate pharmaceutical and surgical products. We believe everyone should have
-                access to the healthcare services they need, and we expect to increase this
-                standard in every aspect to impact the lives of as many people as possible.
+                rate surgical products. We believe everyone should have access to the healthcare
+                services they need, and we expect to increase this standard in every aspect to
+                impact the lives of as many people as possible.
               </p>
             </div>
             <div className="lg:w-1/2 mb-6 lg:mb-0">

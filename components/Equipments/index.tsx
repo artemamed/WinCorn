@@ -53,7 +53,12 @@ const Equipments = () => {
             </div>
             <div className="text-center max-w-7xl mx-auto">
                 <h3 className="text-lg sm:text-xl md:text-2xl lg:text-2xl text-gray-700">
-                    Wincon is an international, research-based, and organized pharmaceutical company. We are proud of our years of experience in the pharmaceutical industry, which has enabled us to lead in the U.S.A. market. We develop and sell a variety of medicinal products and surgical instruments. Our aim is to improve the quality and accessibility of healthcare services to people worldwide.
+                    Wincorn Medical is an international, research-based, and organized medical
+                    company. We are proud of our years of experience in the medical industry, which
+                    has enabled us to lead in the U.S.A. market. We develop and sell a variety of
+                    surgical instruments. Our aim is to improve the quality and accessibility of
+
+                    healthcare services to people worldwide.
                 </h3>
             </div>
 
@@ -63,42 +68,8 @@ const Equipments = () => {
 
             <div className="text-center max-w-7xl mx-auto">
                 <h3 className="text-lg sm:text-xl md:text-2xl lg:text-2xl text-gray-700">
-                    Our portfolio includes various pharmaceutical products such as{" "}
+                    With a commitment to quality, we sell a variety of surgical tools, which include{" "}
                     <Link href="https://www.dynamicmedicalsolution.com/categories/general-instrumentation" legacyBehavior>
-                        <a className="text-green-600 underline font-bold">
-                            steroids,
-                        </a>
-                    </Link>
-                    {" "}
-                    <Link href="https://www.dynamicmedicalsolution.com/products/retractor" legacyBehavior>
-                        <a className="text-green-600 underline font-bold">
-                            syrups,
-                        </a>
-                    </Link>
-                    {" "}
-                    <Link href="https://www.dynamicmedicalsolution.com/products/scalpels" legacyBehavior>
-                        <a className="text-green-600 underline font-bold">
-                            tablets,
-                        </a>
-                    </Link>
-                    {" "}
-                    <Link
-                        href="https://www.dynamicmedicalsolution.com/products/suture"
-                        legacyBehavior
-                    >
-                        <a className="text-green-600 underline font-bold">
-                            vaccines,
-                        </a>
-                    </Link>
-                    {" "} etc. Besides pharmaceutical products, we also sell
-                    {" "}
-                    <Link href="https://www.dynamicmedicalsolution.com/products/retractor" legacyBehavior>
-                        <a className="text-green-600 underline font-bold">
-                            surgical tools,
-                        </a>
-                    </Link>
-                    {" "} which include,{" "}
-                    <Link href="https://www.dynamicmedicalsolution.com/products/retractor" legacyBehavior>
                         <a className="text-green-600 underline font-bold">
                             scalpel,
                         </a>
@@ -110,15 +81,22 @@ const Equipments = () => {
                         </a>
                     </Link>
                     {" "}
-                    <Link href="https://www.dynamicmedicalsolution.com/products/retractor" legacyBehavior>
+                    <Link href="https://www.dynamicmedicalsolution.com/products/scalpels" legacyBehavior>
+                        <a className="text-green-600 underline font-bold">
+                            retractors,
+                        </a>
+                    </Link>
+                    {" "}
+                    <Link
+                        href="https://www.dynamicmedicalsolution.com/products/suture"
+                        legacyBehavior
+                    >
                         <a className="text-green-600 underline font-bold">
                             needle holders,
                         </a>
                     </Link>
-                    {" "} and many more.
-                    <br />
-                    A few are discussed below:
-
+                    {" "} and many more. A few are discussed below:
+                    {" "}
                 </h3>
             </div>
 
@@ -157,13 +135,13 @@ const Equipments = () => {
                     <li className="flex items-start">
                         <FaCheckCircle className="text-green-600 mr-3 mt-1" size={24} />
                         <span>
-                            Optimize and extend the life expectancy of patients.
+                            Extend the longevity and durability of surgical instruments.
                         </span>
                     </li>
                     <li className="flex items-start">
                         <FaCheckCircle className="text-green-600 mr-3 mt-1" size={24} />
                         <span>
-                            Provide first-rate pharmaceutical and surgical products worldwide.
+                            Provide first-rate surgical products worldwide.
                         </span>
                     </li>
                     <li className="flex items-start">

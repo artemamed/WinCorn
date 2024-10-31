@@ -24,7 +24,7 @@ const Navbar: React.FC = () => {
   };
 
   return (
-    <div className="w-full top-0 start-0 py-4 border-b z-50 bg-white shadow-lg transition duration-300 ease-in-out">
+    <div className="w-full top-0 start-0 py-2 border-b z-50 bg-white shadow-lg transition duration-300 ease-in-out">
       <nav className="flex items-center justify-between px-6 max-w-7xl mx-auto">
         <div className="text-3xl font-bold text-black transition-transform transform hover:scale-105">
           <Link href="/" onClick={handleLinkClick}>

@@ -31,8 +31,8 @@ const FAQs = () => {
         answer: "A customer can apply for a refund within 7 working days, but it should not be against the company policy.",
     },
     {
-        question: "Does the company provide services other than pharmaceutical products?",
-        answer: "Yes, the company also provides surgical instruments to its customers.",
+        question: "Does the company provide services other than surgical products?",
+        answer: "Yes, the company also provides its customers with physiotherapy equipment and hospital furniture.",
     },
 ];
 
