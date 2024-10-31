@@ -36,12 +36,13 @@ export async function POST(request: Request) {
 
     // Construct the HTML content for the email
     const cartItemsHtml = cartItems
-      .map((item: {
-        product_name?: string;
-        quantity?: number;
-        price_per_item?: number;
-      }) => {
-        return `
+      .map(
+        (item: {
+          product_name?: string;
+          quantity?: number;
+          price_per_item?: number;
+        }) => {
+          return `
           
           <br />
           <hr />
@@ -54,14 +55,17 @@ export async function POST(request: Request) {
             <strong>Price per item:</strong> ${
               item.price_per_item !== undefined ? item.price_per_item : 0
             } <br />
-            <strong>Total price:</strong> ${
-              item.quantity && item.price_per_item
-                ? item.quantity * item.price_per_item
-                : 0
-            }
+           <strong>Total price:</strong> ${
+             item.quantity && item.price_per_item
+               ? (item.quantity * item.price_per_item).toFixed(2)
+               : "0.00"
+           }
+
           </li>
         `;
-      })      .join("");
+        }
+      )
+      .join("");
 
     const emailContent = `
         <html>
