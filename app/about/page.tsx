@@ -19,7 +19,7 @@ export default function About() {
         {/* CEO Information Section */}
         <section className="text-gray-700 body-font">
           <div className="flex flex-col lg:flex-row items-center">
-            <div className="lg:flex-grow lg:w-1/2 px-5 lg:px-10">
+            <div className="lg:flex-grow lg:w-1/2 ">
               <h3 className="title-font sm:text-4xl text-3xl mb-4 font-bold text-green-600">
                 Kenneth G. Wincorn
               </h3>
@@ -45,13 +45,13 @@ export default function About() {
                 </span>
               </div>
             </div>
-            <div className="lg:w-1/2 mb-10 lg:mb-0 px-5 lg:px-10">
+            <div className="mb-10 lg:w-2/6 lg:mb-0 px-5 lg:px-10">
               <Image
-                width={700}
-                height={700}
-                className="object-cover object-center rounded-lg shadow-lg transition-transform duration-500 hover:scale-105 border border-green-300"
+                width={250}
+                height={250}
+                className="object-conatin rounded-lg shadow-lg transition-transform duration-500 hover:scale-105 border border-green-300"
                 alt="Guiding Principles"
-                src="/images/about1.jpg"
+                src="/wincorn/ceo.jpg"
               />
             </div>
           </div>
@@ -105,7 +105,7 @@ export default function About() {
                 height={700}
                 className="object-cover object-center rounded-lg shadow-lg transition-transform duration-500 hover:scale-105 border border-green-300"
                 alt="Guiding Principles"
-                src="/images/about1.jpg"
+                src="/images/about_us/services.png"
               />
             </div>
           </div>
