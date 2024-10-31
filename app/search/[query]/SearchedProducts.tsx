@@ -13,9 +13,9 @@ import {
 import React, { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { getEdgePoint } from "@/lib/getEdge";
-import { Dialog, DialogClose, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
+import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
 import Link from "next/link";
-import { Accordion, AccordionItem } from "@/components/ui/accordion";
+// import { Accordion, AccordionItem } from "@/components/ui/accordion";
 import Image from "next/image";
 
 // Types
@@ -199,84 +199,84 @@ const SearchedProducts: NextPage<Props> = ({ query }) => {
         {Products &&
           Products.map((product: Product, index: number) => (
             <React.Fragment key={index}>
-               <div
-                      key={index}
-                      className="bg-white rounded-lg shadow-md hover:shadow-lg transition duration-300 p-4 flex flex-col justify-between"
+              <div
+                key={index}
+                className="bg-white rounded-lg shadow-md hover:shadow-lg transition duration-300 p-4 flex flex-col justify-between"
+              >
+                <Dialog>
+                  <DialogTrigger>
+                    <Image
+                      width={450}
+                      height={700}
+                      alt="Product image"
+                      className="object-contain h-[300px] min-h-[300px] rounded-md mb-2"
+                      src={`${edge}/product_images/${product.product_image}`}
+                    />
+                  </DialogTrigger>
+                  <DialogContent>
+                    <DialogHeader>
+                      <DialogTitle>{product.product_name}</DialogTitle>
+                    </DialogHeader>
+                  </DialogContent>
+                </Dialog>
+
+                <div className="pt-2 ">
+                  <div className="flex justify-between items-start mb-2">
+                    <Link
+                      href={`/product/${product.id}`}
+                      className="text-xl font-bold hover:underline tracking-tight text-gray-900"
                     >
-                      <Dialog>
-                        <DialogTrigger>
-                          <Image
-                            width={450}
-                            height={700}
-                            alt="Product image"
-                            className="object-contain h-[300px] min-h-[300px] rounded-md mb-2"
-                            src={`${edge}/product_images/${product.product_image}`}
-                          />
-                        </DialogTrigger>
-                        <DialogContent>
-                          <DialogHeader>
-                            <DialogTitle>{product.product_name}</DialogTitle>
-                          </DialogHeader>
-                        </DialogContent>
-                      </Dialog>
+                      {product.product_name}
+                    </Link>
+                  </div>
+                  <div className="flex my-1 text-lg">
+                    <strong>Price:</strong>
+                    <div className="ml-3 text-green-600 font-semibold">${product.price}</div>
+                  </div>
+                  <div className="flex flex-col md:flex-row md:justify-between">
+                    <select
+                      id="quantities"
+                      onChange={(e) => {
+                        const selectedOption = e.target.value;
+                        const extractedSKU = selectedOption.split("SKU : ")[1];
+                        setProductSKUs({
+                          ...productSKUs,
+                          [product.id]: extractedSKU,
+                        });
+                      }}
+                      className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg block w-full p-2.5 focus:ring-light-secondary focus:border-light-secondary"
+                    >
+                      {product.product_sizes.map((sk: { product_size: string; product_sku: string }, i: number) => (
+                        <option key={i} className="flex justify-around items-center">
+                          <span>Size : {sk.product_size}</span>{" "}
+                          <span>SKU : {sk.product_sku}</span>
+                        </option>
+                      ))}
+                    </select>
+                  </div>
+                  <div className="flex items-center justify-center pt-4 space-x-3">
+                    <Button
+                      className="rounded-full bg-gradient-to-tr from-green-600 to-green-300 py-2 px-4"
+                      onClick={() => handleDecrementQuantity(product.id, product.price)}
+                    >
+                      -
+                    </Button>
+                    <div
+                      id="number-input"
+                      aria-describedby="helper-text-explanation"
+                      className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg block w-full p-2.5 text-center"
+                    >
+                      {productQuantities[product.id] || 1}
+                    </div>
+                    <Button
+                      className="rounded-full bg-gradient-to-tr from-green-600 to-green-300 py-2 px-4"
+                      onClick={() => handleIncrementQuantity(product.id, product.price)}
+                    >
+                      +
+                    </Button>
+                  </div>
 
-                      <div className="pt-2 ">
-                        <div className="flex justify-between items-start mb-2">
-                          <Link
-                            href={`/product/${product.id}`}
-                            className="text-xl font-bold hover:underline tracking-tight text-gray-900"
-                          >
-                            {product.product_name}
-                          </Link>
-                        </div>
-                        <div className="flex my-1 text-lg">
-                          <strong>Price:</strong>
-                          <div className="ml-3 text-green-600 font-semibold">${product.price}</div>
-                        </div>
-                        <div className="flex flex-col md:flex-row md:justify-between">
-                          <select
-                            id="quantities"
-                            onChange={(e) => {
-                              const selectedOption = e.target.value;
-                              const extractedSKU = selectedOption.split("SKU : ")[1];
-                              setProductSKUs({
-                                ...productSKUs,
-                                [product.id]: extractedSKU,
-                              });
-                            }}
-                            className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg block w-full p-2.5 focus:ring-light-secondary focus:border-light-secondary"
-                          >
-                            {product.product_sizes.map((sk: { product_size: string; product_sku: string }, i: number) => (
-                              <option key={i} className="flex justify-around items-center">
-                                <span>Size : {sk.product_size}</span>{" "}
-                                <span>SKU : {sk.product_sku}</span>
-                              </option>
-                            ))}
-                          </select>
-                        </div>
-                        <div className="flex items-center justify-center pt-4 space-x-3">
-                          <Button
-                            className="rounded-full bg-gradient-to-tr from-green-600 to-green-300 py-2 px-4"
-                            onClick={() => handleDecrementQuantity(product.id, product.price)}
-                          >
-                            -
-                          </Button>
-                          <div
-                            id="number-input"
-                            aria-describedby="helper-text-explanation"
-                            className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg block w-full p-2.5 text-center"
-                          >
-                            {productQuantities[product.id] || 1}
-                          </div>
-                          <Button
-                            className="rounded-full bg-gradient-to-tr from-green-600 to-green-300 py-2 px-4"
-                            onClick={() => handleIncrementQuantity(product.id, product.price)}
-                          >
-                            +
-                          </Button>
-                        </div>
-
-                        <Accordion type="single" collapsible>
+                  {/* <Accordion type="single" collapsible>
                           <AccordionItem value="item-1">
                           </AccordionItem>
                         </Accordion>
@@ -322,18 +322,18 @@ const SearchedProducts: NextPage<Props> = ({ query }) => {
                             </DialogContent>
                           </Dialog>
                         ) :
-                          (
-                            <Button
-                              onClick={() => handleAddToCart(product)}
-                              className="w-full bg-gradient-to-tr
-                                  from-green-600 to-green-300"
-                            >
-                              Add to cart
-                            </Button>
-                          )}
-                      </div>
-                      </div>
-                    </div>
+                          ( */}
+                  <Button
+                    onClick={() => handleAddToCart(product)}
+                    className="w-full bg-gradient-to-tr
+                                  from-green-600 to-green-300 mt-5"
+                  >
+                    Add to cart
+                  </Button>
+                  {/* )} */}
+                </div>
+              </div>
+              {/* </div> */}
             </React.Fragment>
           ))}      </div>    </div>
   );

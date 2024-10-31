@@ -12,10 +12,10 @@ import {
 } from "@tanstack/react-query";
 import React, { useState } from "react";
 import { Button } from "@/components/ui/button";
-import {
-  Accordion,
-  AccordionItem,
-} from "@/components/ui/accordion";
+// import {
+//   Accordion,
+//   AccordionItem,
+// } from "@/components/ui/accordion";
 import Link from "next/link";
 import { useInView } from "react-intersection-observer";
 import { getEdgePoint } from "@/lib/getEdge";
@@ -24,10 +24,10 @@ import axiosInstance from "@/config/axios";
 import toast from "react-hot-toast";
 import {
   Dialog,
-  DialogClose,
+  // DialogClose,
   DialogContent,
-  DialogDescription,
-  DialogFooter,
+  // DialogDescription,
+  // DialogFooter,
   DialogHeader,
   DialogTitle,
   DialogTrigger,
@@ -358,7 +358,7 @@ const SubCategoryProducts = ({ slug }: { slug: string }) => {
                           </Button>
                         </div>
 
-                        <Accordion type="single" collapsible>
+                        {/* <Accordion type="single" collapsible>
                           <AccordionItem value="item-1">
                           </AccordionItem>
                         </Accordion>
@@ -404,18 +404,18 @@ const SubCategoryProducts = ({ slug }: { slug: string }) => {
                             </DialogContent>
                           </Dialog>
                         ) :
-                          (
+                          ( */}
                             <Button
                               onClick={() => handleAddToCart(product)}
                               className="w-full bg-gradient-to-tr
-                                  from-green-600 to-green-300"
+                                  from-green-600 to-green-300 mt-5"
                             >
                               Add to cart
                             </Button>
-                          )}
+                          {/* )} */}
                       </div>
                       </div>
-                    </div>
+                    // </div>
                   ))}
                 </React.Fragment>
               ))}
