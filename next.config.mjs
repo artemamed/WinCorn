@@ -15,9 +15,9 @@ export default {
     domains: ["staging.artemamed.com"],
   },
 
-  eslint: {
-    ignoreDuringBuilds: true,
-  },
+  // eslint: {
+  //   ignoreDuringBuilds: true,
+  // },
 };
 
 class VeliteWebpackPlugin {
