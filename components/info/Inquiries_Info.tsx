@@ -82,70 +82,55 @@ const Inquiries_Info = () => {
 
   return (
     <>
-      <div className=" rounded-lg border lg:min-h-screen">
-        <div className="flex justify-center items-center py-3">
-          <span className="text-2xl font-semibold">Inquiries</span>
+      <div className="rounded-lg border shadow-lg  lg:min-h-screen ">
+        <div className="flex justify-center items-center py-6  rounded-t-lg shadow-lg">
+          <span className="text-3xl font-bold tracking-wide">Inquiries</span>
         </div>
 
-        {allInquirys && allInquirys.length == 0 ? (
-          <div className="flex justify-center items-center">
-            <Label className="text-light-accent text-xl font-semibold">
-              You have no Inquiry
-            </Label>
+        {allInquirys && allInquirys.length === 0 ? (
+          <div className="flex justify-center items-center py-10">
+            <p className="text-gray-500 text-2xl font-semibold animate-pulse">You have no inquiries</p>
           </div>
         ) : (
-          <>
-            <ScrollArea className=" h-screen/2">
-              <Table className="">
+          <div className="overflow-auto h-auto">
+            <ScrollArea className=" -inset-2  py-4">
+              <Table className="min-w-full bg-opacity-20">
                 <TableHeader>
                   <TableRow>
-                    <TableHead className=" text-center">#</TableHead>
-
-                    <TableHead className="">Inquiry Date</TableHead>
-
-                    <TableHead className="">Actions</TableHead>
+                    <TableHead className="text-center py-2 text-xl text-green-500 font-semibold tracking-wide">#</TableHead>
+                    <TableHead className="text-center py-2 text-xl text-green-500 font-semibold tracking-wide">Inquiry Date</TableHead>
+                    <TableHead className="text-center py-2 text-xl text-green-500 font-semibold tracking-wide">Status</TableHead>
+                    <TableHead className="py-2 text-xl text-green-500 font-semibold tracking-wide">Actions</TableHead>
                   </TableRow>
                 </TableHeader>
                 <TableBody>
-                {allInquirys &&
-                allInquirys.map((Inquiry: InquiryType, index: number) => {
-                  const date = new Date(Inquiry.created_at);
-                  const options: Intl.DateTimeFormatOptions = {
-                    year: "numeric",
-                    month: "short",
-                    day: "numeric",
-                  };
-                      const visibleStatus = Inquiry.status.toUpperCase();
-                  const visibleDate: string = date.toLocaleString("en-US", options);
-                      if (Inquiry.status == "pending") {
+                  {allInquirys &&
+                    allInquirys.map((inquiry: { created_at: string | number | Date; status: string; id: number }, index: number) => {
+                      const date = new Date(inquiry.created_at);
+                      const options = { year: "numeric", month: "short", day: "numeric" };
+                      const visibleDate = date.toLocaleDateString("en-US", options as Intl.DateTimeFormatOptions);
+                      const visibleStatus = inquiry.status.toUpperCase();
+
+                      if (inquiry.status === "pending") {
                         return (
-                          <TableRow className="border" key={index}>
-                            <TableCell className="font-medium text-center">
-                              {index + 1}
-                            </TableCell>
-
-                            <TableCell className="">{visibleDate}</TableCell>
-                            <TableCell>{visibleStatus}</TableCell>
-
-                            <TableCell className="">
-                              <Menubar className="border-none w-fit ">
+                          <TableRow
+                            key={index}
+                            className="border-b border-gray-600 hover:bg-gray-100 transition-colors duration-300"
+                          >
+                            <TableCell className="font-medium text-center py-3">{index + 1}</TableCell>
+                            <TableCell className="py-3 text-center">{visibleDate}</TableCell>
+                            <TableCell className="py-3 text-center text-red-500">{visibleStatus}</TableCell>
+                            <TableCell className="py-3 text-center">
+                              <Menubar className="border-none w-full text-center">
                                 <MenubarMenu>
-                                  <MenubarTrigger className="cursor-pointer">
-                                    <BsThreeDotsVertical className="h-5 w-5" />
+                                  <MenubarTrigger className="cursor-pointer transform hover:scale-110 transition-transform">
+                                    <BsThreeDotsVertical className="h-5 w-5 text-gray-500" />
                                   </MenubarTrigger>
-                                  <MenubarContent className="w-fit">
-                                    <MenubarItem
-                                      onClick={() =>
-                                        handleViewQuotation(Inquiry.id)
-                                      }
-                                    >
+                                  <MenubarContent className="w-fit rounded-md shadow-lg">
+                                    <MenubarItem onClick={() => handleViewQuotation(inquiry.id)} className="px-4 py-2 text-sm font-medium">
                                       View Inquiry
                                     </MenubarItem>
-                                    <MenubarItem
-                                      onClick={() =>
-                                        HandleDeleteInquiry(Inquiry.id)
-                                      }
-                                    >
+                                    <MenubarItem onClick={() => HandleDeleteInquiry(inquiry.id)} className="px-4 py-2 text-sm font-medium">
                                       Delete Inquiry
                                     </MenubarItem>
                                   </MenubarContent>
@@ -155,15 +140,15 @@ const Inquiries_Info = () => {
                           </TableRow>
                         );
                       }
-                    })}
-                </TableBody>
-              </Table>
+                      return null;
+                    })}                </TableBody>              </Table>
             </ScrollArea>
-          </>
+          </div>
         )}
       </div>
     </>
   );
+
 };
 
 export default Inquiries_Info;

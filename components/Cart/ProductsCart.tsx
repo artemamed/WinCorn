@@ -322,9 +322,9 @@ const Cart = () => {
                     <p className="font-bold text-xl text-gray-800">Total Price: ${totalPiceOfAllItems}</p>
                   </div>
                 ) : (
-                  <div className="text-center text-3xl font-semibold text-red-500 animate-pulse">
+                  <div className="text-center text-2xl font-semibold text-red-500 animate-pulse hover:underline">
                     <Link href="/auth/login">
-                      You are not Login!
+                      Login required for Request Quote!
                     </Link>
                   </div>
                 )}
