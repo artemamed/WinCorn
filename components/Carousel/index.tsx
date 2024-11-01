@@ -113,7 +113,7 @@ export default function Carousel() {
                 </div>
 
                 {/* Desktop version */}
-                <div className="hidden md:flex justify-center items-center relative" style={{ width: '100%', height: '350px', position: 'relative' }}> // height: '400px'
+                <div className="hidden md:flex justify-center items-center relative" style={{ width: '100%', height: '50vh', position: 'relative' }}> // height: '400px'
                     {slides.map((slide, index) => {
                         const { zIndex, transform, scale, opacity, margin } = getCardStyle(index);
 
@@ -125,7 +125,7 @@ export default function Carousel() {
                                     backgroundImage: `url(${slide.image})`,
                                     backgroundSize: 'cover',
                                     backgroundPosition: 'center',
-                                    height: '280px',    // height: '300px',
+                                    height: '300px',    // height: '300px',
                                     width: '600px',
                                     // borderRadius: '20px',
                                     zIndex,

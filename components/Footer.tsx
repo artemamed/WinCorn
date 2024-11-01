@@ -19,7 +19,7 @@ export default function Footer() {
           <ul className="text-gray-300 space-y-2">
             <li className="hover:text-green-400 transition duration-300 cursor-pointer"><Link href="/">Home</Link></li>
             <li className="hover:text-green-400 transition duration-300 cursor-pointer"><Link href="/about">About Us</Link></li>
-            <li className="hover:text-green-400 transition duration-300 cursor-pointer"><Link href="/blogs">Our Blog</Link></li>
+            {/* <li className="hover:text-green-400 transition duration-300 cursor-pointer"><Link href="/blogs">Our Blog</Link></li> */}
             <li className="hover:text-green-400 transition duration-300 cursor-pointer"><Link href="/contact">Contact Us</Link></li>
           </ul>
         </div>
