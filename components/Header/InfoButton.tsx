@@ -40,6 +40,9 @@ const InfoButton = () => {
     console.error("Failed to fetch inquiries:", error);
   }
 
+  // Render icon only if User is logged in
+  if (!User) return null;
+
   return (
     <Link href={"/info"} className="hover:text-gray-500">
       <Badge content={inquiryCount}>
