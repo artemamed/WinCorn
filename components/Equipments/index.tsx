@@ -8,7 +8,7 @@ import { FaCheckCircle, FaPhoneAlt } from "react-icons/fa";
 const Equipments = () => {
     const items = [
         {
-            href: "https://www.dynamicmedicalsolution.com/categories/neurological-spine-instruments",
+            href: "https://win-corn-wr7y.vercel.app/categories/neurological-spine-instruments",
             src: "/images/SO.jpg",
             alt: "Surgical Orthopedic",
             title: "Surgical Orthopedics",
@@ -16,7 +16,7 @@ const Equipments = () => {
                 "Our orthopedic instruments are of top quality. They are available in various sizes and designs and are highly affordable for customers.",
         },
         {
-            href: "https://www.dynamicmedicalsolution.com/products/gynae-set",
+            href: "https://win-corn-wr7y.vercel.app/products/gynae-set",
             src: "/images/NH.jpg",
             alt: "Needle Holders",
             title: "Needle Holder",
@@ -24,7 +24,7 @@ const Equipments = () => {
                 "A variety of needle holders are manufactured by WinCorn Medical. They are well-known for their ergonomic design and affordable price range.",
         },
         {
-            href: "https://www.dynamicmedicalsolution.com/products/needle-holders",
+            href: "https://win-corn-wr7y.vercel.app/products/needle-holders",
             src: "/images/DI.jpg",
             alt: "Dental Instruments",
             title: "Dental Instruments",
@@ -32,7 +32,7 @@ const Equipments = () => {
                 "WinCorn Medical holds special importance for its dental instruments, including pushers, pliers, explorers, elevators, etc.",
         },
         {
-            href: "https://www.dynamicmedicalsolution.com/products/scissors",
+            href: "https://win-corn-wr7y.vercel.app/products/scissors",
             src: "/images/SS.jpg",
             alt: "Surgical Scissors",
             title: "Surgical Scissors",
@@ -69,26 +69,26 @@ const Equipments = () => {
             <div className="text-center max-w-7xl mx-auto">
                 <h3 className="text-lg sm:text-xl md:text-2xl lg:text-2xl text-gray-700">
                     With a commitment to quality, we sell a variety of surgical tools, which include{" "}
-                    <Link href="https://www.dynamicmedicalsolution.com/categories/general-instrumentation" legacyBehavior>
+                    <Link href="https://win-corn-wr7y.vercel.app/categories/general-instrumentation" legacyBehavior>
                         <a className="text-green-600 underline font-bold">
                             scalpel,
                         </a>
                     </Link>
                     {" "}
-                    <Link href="https://www.dynamicmedicalsolution.com/products/retractor" legacyBehavior>
+                    <Link href="https://win-corn-wr7y.vercel.app/products/retractor" legacyBehavior>
                         <a className="text-green-600 underline font-bold">
                             scissors,
                         </a>
                     </Link>
                     {" "}
-                    <Link href="https://www.dynamicmedicalsolution.com/products/scalpels" legacyBehavior>
+                    <Link href="https://win-corn-wr7y.vercel.app/products/scalpels" legacyBehavior>
                         <a className="text-green-600 underline font-bold">
                             retractors,
                         </a>
                     </Link>
                     {" "}
                     <Link
-                        href="https://www.dynamicmedicalsolution.com/products/suture"
+                        href="https://win-corn-wr7y.vercel.app/products/suture"
                         legacyBehavior
                     >
                         <a className="text-green-600 underline font-bold">
