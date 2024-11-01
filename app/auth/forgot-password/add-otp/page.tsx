@@ -70,13 +70,13 @@ const AddOTP = () => {
 
           <div className="flex items-center justify-between">
             <Button
-              className="bg-light-secondary hover:bg-light-secondary text-white font-bold py-2 px-5  focus:outline-none focus:shadow-outline"
+              className="bg-green-500 text-white font-bold py-2 px-5  focus:outline-none focus:shadow-outline"
               type="button"
               onClick={HandleVerify}
             >
               Verify OTP
             </Button>
-            <Button className="inline-block align-baseline font-bold text-sm text-light-secondary hover:text-light-secondary bg-transparent hover:bg-light-secondary">
+            <Button className="inline-block align-baseline font-bold text-sm bg-transparent hover:bg-green-500">
               Resend OTP
             </Button>
           </div>

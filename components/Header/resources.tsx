@@ -41,9 +41,6 @@ const Resources: NextPage = () => {
             <a href="/ifu">
               <DropdownMenuItem>IFU</DropdownMenuItem>
             </a>
-            <a href="/FAQs">
-              <DropdownMenuItem>FAQs</DropdownMenuItem>
-            </a>
             <a href="/blogs">
               <DropdownMenuItem>Blogs</DropdownMenuItem>
             </a>

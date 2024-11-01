@@ -119,7 +119,7 @@ const Navbar: React.FC = () => {
       )}
 
       {/* Separator Line */}
-      <div className="hidden lg:block border-b border-gray-300 my-3 lg:max-w-3xl xl:max-w-7xl items-center justify-center mx-auto" />
+      <div className="hidden lg:block border-b border-gray-300 my-1 lg:max-w-3xl xl:max-w-7xl items-center justify-center mx-auto py-1" />
 
       {/* Desktop Navigation */}
       <nav className="hidden lg:flex items-center justify-center px-6 max-w-7xl mx-auto">

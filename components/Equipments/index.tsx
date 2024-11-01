@@ -42,7 +42,7 @@ const Equipments = () => {
     ];
 
     return (
-        <div className="flex flex-col justify-evenly items-center space-y-10 py-8 px-4 sm:px-6 md:px-8 lg:px-16 bg-gray-50">
+        <div className="flex flex-col justify-evenly items-center space-y-10 py-8 px-4 sm:px-6 md:px-8 lg:px-16 bg-gray-200">
 
             <div className="text-center max-w-4xl mx-auto">
                 <h2 className="text-lg sm:text-xl md:text-2xl lg:text-4xl text-gray-700">
@@ -115,7 +115,7 @@ const Equipments = () => {
 
 
 
-            <div className="bg-gradient-to-b from-white to-gray-100 py-12 px-6 md:px-12 text-center max-w-7xl mx-auto rounded-lg shadow-lg">
+            <div className="bg-gradient-to-b from-white to-gray-100 py-12 px-6 md:px-12 text-center max-w-7xl mx-auto rounded-2xl shadow-lg">
                 <h3 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-800 mb-4">
                     <span className="bg-clip-text text-transparent bg-gradient-to-r from-green-400 to-green-600">
                         What is Our Motive?

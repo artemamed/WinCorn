@@ -82,7 +82,7 @@ export default function Carousel() {
     };
 
     return (
-        <div className="relative flex flex-col items-center justify-center p-[1rem] lg:p-[1rem] xl:p-[2rem]" style={{ zIndex: 10 }}>
+        <div className="relative flex flex-col items-center justify-center p-[1rem]" style={{ zIndex: 10 }}>
             <div className="text-2xl font-medium text-gray-800 xl:text-6xl lg:text-5xl md:text-3xl">
                 Welcome to <span className="text-green-500">WinCorn Medical</span>
             </div>
@@ -90,9 +90,9 @@ export default function Carousel() {
             <p className="text-center text-gray-700 text-lg mb-6 xl:text-xl 2xl:text-2xl max-w-3xl">
                 We deliver premium surgical instruments that meet the highest standards of quality, offer exceptional value, and provide the reliability our customers expect.
             </p>
-            <Link href="/blogs">
+            {/* <Link href="/blogs">
                 <button className="bg-green-500 xl:px-6 xl:py-2 px-3 py-1 rounded-full text-white xl:text-lg text-sm mb-2">Explore</button>
-            </Link>
+            </Link> */}
 
             {/* Carousel Container */}
             <div className="overflow-hidden w-full max-w-6xl relative rounded-2xl" style={{ zIndex: 9 }}>
@@ -113,20 +113,21 @@ export default function Carousel() {
                 </div>
 
                 {/* Desktop version */}
-                <div className="hidden md:flex justify-center items-center relative" style={{ width: '100%', height: '400px', position: 'relative' }}>
+                <div className="hidden md:flex justify-center items-center relative" style={{ width: '100%', height: '350px', position: 'relative' }}> // height: '400px'
                     {slides.map((slide, index) => {
                         const { zIndex, transform, scale, opacity, margin } = getCardStyle(index);
 
                         return (
                             <div
                                 key={index}
-                                className={`absolute flex-none rounded-2xl shadow-lg transition-transform duration-1000 ease-in-out overflow-hidden`}
+                                className={`absolute flex-none shadow-lg transition-transform duration-1000 ease-in-out overflow-hidden`}
                                 style={{
                                     backgroundImage: `url(${slide.image})`,
                                     backgroundSize: 'cover',
                                     backgroundPosition: 'center',
-                                    height: '300px',
+                                    height: '280px',    // height: '300px',
                                     width: '600px',
+                                    // borderRadius: '20px',
                                     zIndex,
                                     transform: `${transform} scale(${scale})`,
                                     opacity,
@@ -136,8 +137,7 @@ export default function Carousel() {
                             >
                             </div>
                         );
-                    })}
-                </div>
+                    })}                </div>
             </div>
         </div>
     );

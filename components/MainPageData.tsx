@@ -7,7 +7,7 @@ import Testimonials from './Testimonials';
 export default function MainPageData() {
     return (
         <>
-            <header className="bg-gradient-to-b from-[#cfd1d0] via-[#cfd1d0] to-[#cfd1d0] text-black">
+            <header className="bg-gray-200 text-black">
                 <Carousel />
             </header>
             <Equipments />

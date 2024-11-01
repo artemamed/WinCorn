@@ -116,7 +116,7 @@ const Page = (props: { params: { email: string } }) => {
               <button
                 onClick={handleSubmit}
                 type="button"
-                className="w-full text-white bg-light-secondary hover:bg-light-secondary/75 focus:ring-4 focus:outline-none focus:ring-light-secondary font-medium rounded-lg text-sm px-5 py-2.5 text-center "
+                className="w-full text-white bg-green-500 focus:ring-4 focus:outline-none font-medium rounded-lg text-sm px-5 py-2.5 text-center "
               >
                 Update
               </button>

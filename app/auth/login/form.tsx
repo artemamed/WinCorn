@@ -119,13 +119,13 @@ const LoginForm = () => {
       <div>
         <p className="text-base font-normal text-gray-800 text-center">
           Create a new account?{" "}
-          <Link href="/auth/register" className="font-medium text-light-secondary hover:underline">
+          <Link href="/auth/register" className="font-medium hover:underline hover:text-green-500">
             Register here
           </Link>
         </p>
         <p className="text-base font-normal text-gray-800 text-center">or</p>
         <p className="text-base font-normal text-gray-800 text-center">
-          <Link href="/auth/forgot-password" className="font-medium text-light-secondary hover:underline">
+          <Link href="/auth/forgot-password" className="font-medium hover:text-green-500 hover:underline">
             Forgot password?
           </Link>
         </p>

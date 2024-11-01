@@ -68,7 +68,7 @@ const ForgotPassword = () => {
             value={input.email}
             name="email"
             id="email"
-            className="bg-gray-50 border border-gray-300 sm:text-sm rounded-lg focus:ring-light-secondary focus:border-light-secondary block w-full p-2.5  dark:border-gray-600 dark:placeholder-gray-400 dark:focus:ring-light-secondary dark:focus:border-light-secondary"
+            className="bg-gray-50 border border-gray-300 sm:text-sm rounded-lg focus:ring-light-secondary focus:border-light-secondary block w-full p-2.5 "
             placeholder="name@company.com"
             onChange={handleChange}
             required={true}
@@ -83,7 +83,7 @@ const ForgotPassword = () => {
           type="button"
           onClick={handleSendOTP}
           disabled={isloading}
-          className="w-full text-white bg-light-secondary hover:bg-light-secondary/75 focus:ring-4 focus:outline-none focus:ring-light-secondary font-medium rounded-lg text-sm px-5 py-2.5 text-center "
+          className="w-full text-white bg-green-500 focus:ring-4 focus:outline-none font-medium rounded-lg text-sm px-5 py-2.5 text-center "
         >
           Get OTP Code
         </button>

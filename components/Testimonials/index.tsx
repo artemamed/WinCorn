@@ -7,7 +7,7 @@ import { FaQuoteLeft } from 'react-icons/fa'; // Import icons
 
 const Testimonials = () => {
   return (
-    <div className="bg-gray-50 px-6 md:px-12 text-center max-w-8xl mx-auto rounded-lg shadow-md p-[5rem]">
+    <div className="bg-gray-200 px-6 md:px-12 text-center max-w-8xl mx-auto rounded-lg shadow-md p-[5rem]">
       <div className="flex flex-col justify-center items-center p-4 mb-6">
         <span className="text-3xl sm:text-4xl md:text-5xl font-semibold text-gray-800">Testimonials</span>
       </div>
@@ -26,7 +26,7 @@ const Testimonials = () => {
         >
           {dummytestominal.map((testominal, index) => (
             <section key={index} className="p-4 flex justify-center">
-              <div className="max-w-screen-md w-full p-6 bg-white rounded-lg shadow-xl transition-transform transform hover:scale-105 duration-300 flex flex-col justify-between h-full">
+              <div className="max-w-screen-md w-full p-6 bg-white rounded-3xl shadow-xl transition-transform transform hover:scale-105 duration-300 flex flex-col justify-between h-full">
                 <figure className="flex-grow">
                   <blockquote className="flex items-center">
                     <FaQuoteLeft className="text-gray-500 mr-2" size={24} />
