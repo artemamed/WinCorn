@@ -55,7 +55,7 @@ const Equipments = () => {
                 <h3 className="text-lg sm:text-xl md:text-2xl lg:text-2xl text-gray-700">
                     Wincorn Medical is an international, research-based, and organized medical
                     company. We are proud of our years of experience in the medical industry, which
-                    has enabled us to lead in the U.S.A. market. We develop and sell a variety of
+                    has enabled us to compete in the U.S.A. market. We develop and sell a variety of
                     surgical instruments. Our aim is to improve the quality and accessibility of
 
                     healthcare services to people worldwide.

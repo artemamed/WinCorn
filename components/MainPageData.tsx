@@ -2,7 +2,7 @@
 import React from 'react';
 import Carousel from './Carousel';
 import Equipments from './Equipments';
-import Testimonials from './Testimonials';
+// import Testimonials from './Testimonials';
 
 export default function MainPageData() {
     return (
@@ -11,7 +11,7 @@ export default function MainPageData() {
                 <Carousel />
             </header>
             <Equipments />
-            <Testimonials />
+            {/* <Testimonials /> */}
         </>
     );
 }
