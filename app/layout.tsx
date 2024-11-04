@@ -46,7 +46,7 @@ export const metadata: ExtendedMetadata = {
     type: "website",
     images: [
       {
-        url: "https://artemamed.com/images/OG_Artema.jpg", // Ensure this is a valid image URL
+        url: "https://artemamed.com/images/SS.jpg", // Ensure this is a valid image URL
         width: 1200,
         height: 630,
         alt: "Wincorn Medical Surgical Instruments",
