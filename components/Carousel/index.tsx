@@ -90,9 +90,9 @@ export default function Carousel() {
             <p className="text-center text-gray-700 text-lg mb-6 xl:text-xl 2xl:text-2xl max-w-3xl">
                 We deliver premium surgical instruments that meet the highest standards of quality, offer exceptional value, and provide the reliability our customers expect.
             </p>
-            <Link href="/blogs">
+            {/* <Link href="/blogs">
                 <button className="bg-green-500 xl:px-6 xl:py-2 px-3 py-1 rounded-full text-white xl:text-lg text-sm mb-2">Explore</button>
-            </Link>
+            </Link> */}
 
             {/* Carousel Container */}
             <div className="overflow-hidden w-full max-w-6xl relative rounded-2xl" style={{ zIndex: 9 }}>

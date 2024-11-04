@@ -1,4 +1,3 @@
-/* eslint-disable @next/next/no-img-element */
 "use client";
 import {
   ParticularSubCategoryProducts,
@@ -12,10 +11,6 @@ import {
 } from "@tanstack/react-query";
 import React, { useState } from "react";
 import { Button } from "@/components/ui/button";
-// import {
-//   Accordion,
-//   AccordionItem,
-// } from "@/components/ui/accordion";
 import Link from "next/link";
 import { useInView } from "react-intersection-observer";
 import { getEdgePoint } from "@/lib/getEdge";
@@ -24,10 +19,7 @@ import axiosInstance from "@/config/axios";
 import toast from "react-hot-toast";
 import {
   Dialog,
-  // DialogClose,
   DialogContent,
-  // DialogDescription,
-  // DialogFooter,
   DialogHeader,
   DialogTitle,
   DialogTrigger,
@@ -35,7 +27,7 @@ import {
 import { ChevronDownIcon, XIcon } from "lucide-react";
 
 const SubCategoryProducts = ({ slug }: { slug: string }) => {
-  const [showDropdown, setShowDropdown] = useState(false); // State to manage dropdown visibility
+  const [showDropdown, setShowDropdown] = useState(false);
 
   const edge = getEdgePoint();
   // Query to get all Categories names
@@ -220,20 +212,28 @@ const SubCategoryProducts = ({ slug }: { slug: string }) => {
 
   if (!isError && allProducts) {
     return (
-      <div className="flex flex-col lg:flex-row gap-4 p-4 bg-gray-300">
-        <div className="hidden lg:block lg:w-1/3 xl:w-1/4">
-          <h2 className="text-2xl font-bold text-gray-800 pb-4 border-b-2 border-gray-300 hover:text-green-500">Categories</h2>
+      <div className="flex flex-col lg:flex-row gap-4 p-4 bg-gray-300 h-[calc(100vh-80px)]">
+    {/* Categories Section */}
+    <div className="hidden lg:block lg:w-1/3 xl:w-1/4 h-full overflow-y-auto">
+          <h2 className="text-2xl font-bold text-gray-800 pb-4 border-b-2 border-gray-300 hover:text-green-500">
+            Categories
+          </h2>
           {allCategories &&
-            allCategories.map((category: { category_slug: string; category_name: string }, index: number) => (
-              <Link
-                key={index}
-                href={`/categories/${category.category_slug}`}
-                className="block p-3 rounded-lg shadow-md bg-white transition-transform transform hover:scale-105 hover:shadow-lg mb-4 border-l-4 border-green-500"
-              >
-                <span className="text-gray-600 font-semibold hover:text-green-500">{category.category_name}</span>
-              </Link>
-            ))}
+            allCategories.map(
+              (category: { category_slug: string; category_name: string }, index: number) => (
+                <Link
+                  key={index}
+                  href={`/categories/${category.category_slug}`}
+                  className="block p-3 rounded-lg shadow-md bg-white transition-transform transform hover:scale-105 hover:shadow-lg mb-4 border-l-4 border-green-500"
+                >
+                  <span className="text-gray-600 font-semibold hover:text-green-500">
+                    {category.category_name}
+                  </span>
+                </Link>
+              )
+            )}
         </div>
+
 
         {/* Mobile Dropdown Button */}
         <button
@@ -268,7 +268,7 @@ const SubCategoryProducts = ({ slug }: { slug: string }) => {
             ))}
         </div>
 
-        <div className="px-4">
+        <div className="px-4 h-full overflow-y-auto w-full" id="productsSection">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 gap-4 pt-5">
             {allProducts &&
               allProducts.pages.map((page) => (
@@ -357,65 +357,15 @@ const SubCategoryProducts = ({ slug }: { slug: string }) => {
                             +
                           </Button>
                         </div>
-
-                        {/* <Accordion type="single" collapsible>
-                          <AccordionItem value="item-1">
-                          </AccordionItem>
-                        </Accordion>
-                        <div className="py-2">
-                        {token.length == 0 ? (
-                          <Dialog>
-                            <DialogTrigger className="w-full">
-                              <Button
-                                className="w-full bg-gradient-to-tr
-                                      from-green-600 to-green-300"
-                              >
-                                Add to cart
-                              </Button>
-                            </DialogTrigger>
-                            <DialogContent>
-                              <DialogHeader>
-                                <DialogTitle>Login Required</DialogTitle>
-                                <DialogDescription>
-                                  Login with your account to add products
-                                  into your cart. <Link href="/auth/login"><strong className="text-green-500">LogIn</strong></Link>
-                                </DialogDescription>
-                              </DialogHeader>
-                              <DialogFooter>
-                                <DialogClose asChild className="mr-[2.5rem]">
-                                  <Button
-                                    type="button"
-                                    className=""
-                                  >
-                                    Close
-                                  </Button>
-                                </DialogClose>
-                                <DialogClose asChild>
-                                  <Link href={"/auth/register"}>
-                                    <Button
-                                      type="submit"
-                                      className="hidden lg:block rounded-md px-5 py-2.5 text-sm font-medium text-white transition  bg-light-secondary hover:bg-light-secondary/80"
-                                    >
-                                      Create Account
-                                    </Button>
-                                  </Link>
-                                </DialogClose>
-                              </DialogFooter>
-                            </DialogContent>
-                          </Dialog>
-                        ) :
-                          ( */}
-                            <Button
-                              onClick={() => handleAddToCart(product)}
-                              className="w-full bg-gradient-to-tr
+                        <Button
+                          onClick={() => handleAddToCart(product)}
+                          className="w-full bg-gradient-to-tr
                                   from-green-600 to-green-300 mt-5"
-                            >
-                              Add to cart
-                            </Button>
-                          {/* )} */}
+                        >
+                          Add to cart
+                        </Button>
                       </div>
-                      </div>
-                    // </div>
+                    </div>
                   ))}
                 </React.Fragment>
               ))}
@@ -449,7 +399,7 @@ const SubCategoryProducts = ({ slug }: { slug: string }) => {
                   <span className="sr-only">Loading...</span>
                 </div>
               ) : hasNextPage ? (
-                "Load more"
+                "... End ..."
               ) : (
                 ""
               )}
