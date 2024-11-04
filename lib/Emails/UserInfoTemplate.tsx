@@ -31,7 +31,7 @@ import {
         <h2 className="text-2xl text-center font-semibold">New User Registration</h2>
         <div className="text-xl">
         <p>Hello {recipientType}, </p>
-        <p >A new user has registered on Artema med website.</p>
+        <p >A new user has registered on Wincorn med website.</p>
         <p className="font-semibold mt-3" >User Details:</p>
         <p className=""><b>Registrant Name: </b> {userFirstname} </p>
         <p > <b>Registrant Email: </b> {userEmail}</p>

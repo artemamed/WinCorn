@@ -28,13 +28,13 @@ const Navbar: React.FC = () => {
       <nav className="flex items-center justify-between px-6 max-w-7xl mx-auto">
         <div className="text-3xl font-bold text-black transition-transform transform hover:scale-105">
           <Link href="/" onClick={handleLinkClick}>
-          <Image
-            src="/wincorn/WinCorn.png"
-            alt="WinCorn"
-            width={250}
-            height={250}
-            className="-mt-[6rem] -mb-[7rem] -ml-[3rem]"
-          />
+            <Image
+              src="/wincorn/WinCorn.png"
+              alt="WinCorn"
+              width={250}
+              height={250}
+              className="-mt-[6rem] -mb-[7rem] -ml-[3rem]"
+            />
           </Link>
         </div>
 
@@ -43,19 +43,19 @@ const Navbar: React.FC = () => {
           <div className="mr-5 -mb-1">
             <InfoButton />
           </div>
-          
+
           <div className="mr-5 -mb-1">
             <CartButton />
           </div>
           <div className="hidden md:block mr-5 -mb-1">
-          
-          <UserDropDown setMobileMenuOpen={setMobileMenuOpen} />
+
+            <UserDropDown setMobileMenuOpen={setMobileMenuOpen} />
 
           </div>
           <div className="hidden md:block mr-5">
             <SearchInput />
           </div>
-          
+
 
           <button onClick={toggleMobileMenu} aria-label="Toggle Menu">
             {mobileMenuOpen ? (
@@ -72,7 +72,7 @@ const Navbar: React.FC = () => {
           <InfoButton />
           <CartButton />
           <div className="hidden md:flex md:gap-4">
-          <UserDropDown setMobileMenuOpen={setMobileMenuOpen} />
+            <UserDropDown setMobileMenuOpen={setMobileMenuOpen} />
 
           </div>
         </div>
@@ -91,15 +91,15 @@ const Navbar: React.FC = () => {
               </Link>
             </li>
             <li>
+              <Link href="/about" className="text-black hover:text-green-600 transition duration-200" onClick={handleLinkClick}>
+                About Us
+              </Link>
+            </li>
+            <li>
               <ProductDropDown />
             </li>
             <li>
               <Resources />
-            </li>
-            <li>
-              <Link href="/about" className="text-black hover:text-green-600 transition duration-200" onClick={handleLinkClick}>
-                About Us
-              </Link>
             </li>
             <li>
               <TandC />
@@ -110,7 +110,7 @@ const Navbar: React.FC = () => {
               </Link>
             </li>
             <li className="block md:hidden">
-            <UserDropDown setMobileMenuOpen={setMobileMenuOpen} />
+              <UserDropDown setMobileMenuOpen={setMobileMenuOpen} />
 
             </li>
             <li></li>
@@ -127,6 +127,9 @@ const Navbar: React.FC = () => {
           <li>
             <Link href="/" className="text-black hover:text-green-600 transition duration-200">Home</Link>
           </li>
+          <li>
+            <Link href="/about" className="text-black hover:text-green-600 transition duration-200">About Us</Link>
+          </li>
           <li className="relative">
             <ProductDropDown />
           </li>
@@ -135,9 +138,6 @@ const Navbar: React.FC = () => {
           </li>
           <li className="relative">
             <TandC />
-          </li>
-          <li>
-            <Link href="/about" className="text-black hover:text-green-600 transition duration-200">About Us</Link>
           </li>
           <li>
             <Link href="/contact" className="text-black hover:text-green-600 transition duration-200">Contact Us</Link>

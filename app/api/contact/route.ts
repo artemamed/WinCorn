@@ -45,14 +45,14 @@ export async function POST(request: Request) {
             <div style="max-width: 600px; margin: 0 auto; padding: 20px; border: 1px solid #ddd; border-radius: 8px; background-color: #f9f9f9;">
               <h2 style="color: #007BFF;">Hello ${fname} ${lname},</h2>
               <p style="font-size: 16px;">
-                Thank you for reaching out to us at Artema Medical! We have received your inquiry and our team will get back to you as soon as possible.
+                Thank you for reaching out to us at Wincorn Medical! We have received your inquiry and our team will get back to you as soon as possible.
               </p>
               <p style="font-size: 16px;">
                 If you have any additional questions or need further assistance in the meantime, please don't hesitate to contact us.
               </p>
               <p style="font-size: 16px; margin-top: 20px;">
                 Best regards,<br />
-                <strong>Artema Medical</strong><br />
+                <strong>Wincorn Medical</strong><br />
               </p>
             </div>
           </body>
@@ -63,7 +63,7 @@ export async function POST(request: Request) {
     // Send notification email to admin
     await sendEmail(
       'sales@artemamed.com',
-      'New Contact Form Submission from Artema Medical',
+      'New Contact Form Submission from Wincorn Medical',
       `
         <html>
           <body style="font-family: Arial, sans-serif; line-height: 1.6; color: #333;">
@@ -83,7 +83,7 @@ export async function POST(request: Request) {
               </p>
               <p style="font-size: 16px;">
                 Best regards,<br />
-                <strong>Artema Medical</strong><br />
+                <strong>Wincorn Medical</strong><br />
               </p>
             </div>
           </body>

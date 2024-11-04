@@ -20,7 +20,7 @@ export async function generateMetadata({ params }: { params: { slug: string } })
 
   // Return the metadata for the found category
   return {
-    title: `${category.title} | Artema Medical Group`,
+    title: `${category.title} | Wincorn Medical Group`,
     description: category.description,
   };
 }

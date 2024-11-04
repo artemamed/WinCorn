@@ -13,7 +13,7 @@ export async function generateMetadata({ params }: { params: ParamsProps }): Pro
 
   // Return the metadata for the found product's subcategory
   return {
-    title: `${metaData.subCategory_title} | Artema Medical`,
+    title: `${metaData.subCategory_title} | Wincorn Medical`,
     description: metaData.subCategory_description,
   };
 }

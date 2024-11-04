@@ -5,7 +5,7 @@ export const SendOTPEmail = ({ otp }: { otp: number }) => {
   return render(
     OTPEmailTemplate({
       otp,
-      CompanyName: "Artema Medical",
+      CompanyName: "Wincorn Medical",
     })
   );
 };

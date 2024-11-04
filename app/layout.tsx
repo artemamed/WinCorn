@@ -28,9 +28,9 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: ExtendedMetadata = {
   metadataBase: new URL("https://artemamed.com/"),
-  title: "Surgical Instruments | Artema Medical | General Instruments",
+  title: "Surgical Instruments | Wincorn Medical | General Instruments",
   description:
-    "Discover high-quality surgical instruments at Artema Medical. We manufacture and supply a wide range of products.",
+    "Discover high-quality surgical instruments at Wincorn Medical. We manufacture and supply a wide range of products.",
   verification: {
     google: "_Lqn7kh6lWaoH47eD0BgKLq-XihIvljbrnmT3tdu5gk",
     bing: "BAEE953253739AE12DC726DBB54CCFA0", // Add Bing verification code here
@@ -39,9 +39,9 @@ export const metadata: ExtendedMetadata = {
     canonical: "./",
   },
   openGraph: {
-    title: "Surgical Instruments | Artema Medical | General Instruments",
+    title: "Surgical Instruments | Wincorn Medical | General Instruments",
     description:
-      "Discover high-quality surgical instruments at Artema Medical. We manufacture and supply a wide range of products.",
+      "Discover high-quality surgical instruments at Wincorn Medical. We manufacture and supply a wide range of products.",
     url: "https://artemamed.com/",
     type: "website",
     images: [
@@ -49,7 +49,7 @@ export const metadata: ExtendedMetadata = {
         url: "https://artemamed.com/images/OG_Artema.jpg", // Ensure this is a valid image URL
         width: 1200,
         height: 630,
-        alt: "Artema Medical Surgical Instruments",
+        alt: "Wincorn Medical Surgical Instruments",
       },
     ],
   },

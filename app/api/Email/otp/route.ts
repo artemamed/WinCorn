@@ -14,11 +14,11 @@ export async function POST(request: NextRequest) {
     // Base options for all emails without HTML content
     const options = {
       from: {
-        name: "Artema Medical",
+        name: "Wincorn Medical",
         address: "zaifali785@gmail.com",
       },
       to: email,
-      subject: "OTP form Artema Medical",
+      subject: "OTP form Wincorn Medical",
       html: await SendOTPEmail({ otp: otp }),
     };
     const transporter = nodemailer.createTransport({

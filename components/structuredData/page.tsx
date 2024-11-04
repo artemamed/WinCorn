@@ -23,7 +23,7 @@ export const generateContentStructuredData = (Props: CategoryPosting) => {
     const homepageSchema = {
       "@context": "https://schema.org",
       "@type": "MedicalOrganization",
-      name: "Artema Medical Group",
+      name: "Wincorn Medical Group",
       alternateName: "AMG",
       url: "https://artemamed.com/",
       logo: "https://artemamed.com/images/Artema%20Logo.png",

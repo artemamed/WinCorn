@@ -103,7 +103,7 @@ const RefundPolicy: React.FC = () => {
 
       {/* Footer */}
       <footer className="mt-10 text-center text-gray-600">
-        <p>© 2024 Artema Medical Solutions. All rights reserved.</p>
+        <p>© 2024 Wincorn Medical Solutions. All rights reserved.</p>
       </footer>
     </div>
   );

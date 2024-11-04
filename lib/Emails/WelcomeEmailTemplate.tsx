@@ -27,7 +27,7 @@ export const WelcomeEmailTemplate = ({
           </div>
           <Text style={paragraph}>Hi {userFirstname},</Text>
           <p style={paragraph}>
-            Welcome aboard Artema Med! We&apos;re thrilled to include you in our
+            Welcome aboard Wincorn Medical! We&apos;re thrilled to include you in our
             innovative quest to transform the landscape of surgical and medical
             advancements. We appreciate your eagerness to join us, and prepare
             yourself for an era where exceptional healthcare is readily
@@ -44,7 +44,7 @@ export const WelcomeEmailTemplate = ({
           <Text style={paragraph}>
             Best,
             <br />
-            The ArtemaMed Team
+            The Wincorn Medical Team
           </Text>
           <Hr style={hr} />
           <div className="-mt-4"></div>

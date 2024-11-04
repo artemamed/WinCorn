@@ -52,7 +52,7 @@ export async function POST(req: NextRequest) {
     `;
       const mailOptions = {
         from: {
-          name: "IT Services Of Artema Group",
+          name: "IT Services Of Wincorn Group",
           address: "sales@artemamedical.com",
         },
         to,

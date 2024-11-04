@@ -313,7 +313,7 @@ export const BioMedicalDetails = [
      
      
     ],
-    description:"The bellavista™ neo is a neonatal ventilator dedicated to the NICU. Artema has an unwavering determination to develop dependable solutions that are easy to use and designed with precision and reliability to support neonates. The bellavista neo with its best-in-class NIV performance and flexibility across key ventilation modalities from conventional to nCPAP to high flow nasal cannula, bellavista meets the unique and essential needs of babies <10kg. Now, our healthcare providers can have peace of mind and support these babies through their first weeks of life so they can grow up strong, healthy and full of hope."
+    description:"The bellavista™ neo is a neonatal ventilator dedicated to the NICU. Wincorn has an unwavering determination to develop dependable solutions that are easy to use and designed with precision and reliability to support neonates. The bellavista neo with its best-in-class NIV performance and flexibility across key ventilation modalities from conventional to nCPAP to high flow nasal cannula, bellavista meets the unique and essential needs of babies <10kg. Now, our healthcare providers can have peace of mind and support these babies through their first weeks of life so they can grow up strong, healthy and full of hope."
 ,  shortDescription: [
       {
         value:
@@ -526,7 +526,7 @@ export const BioMedicalDetails = [
 "Performing CPET tests can be complex and difficult, especially after peripheral devices are added. Vyntus™ CPX stands out from all other metabolic carts, as many new features now make CPET testing easy to learn and perform.",  shortDescription: [
       {
         value:
-"Vyntus™ CPX has taken the hassle out of CPET testing by integrating hardware and software peripherals, utilizing pre-exercise hardware and software checks, automating flow sensor calibration, and incorporating software that actually helps guide users through performing the best test possible. Test completed? The Artema software platform can also assist with data cleanup and assessment.",      },
+"Vyntus™ CPX has taken the hassle out of CPET testing by integrating hardware and software peripherals, utilizing pre-exercise hardware and software checks, automating flow sensor calibration, and incorporating software that actually helps guide users through performing the best test possible. Test completed? The Wincorn software platform can also assist with data cleanup and assessment.",      },
       
     ],
   },

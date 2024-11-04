@@ -16,19 +16,19 @@ export async function generateMetadata({ params }: { params: ParamProps }) {
     // If the product is null or does not have the necessary properties, return default metadata
     if (!product || !product.product_name || !product.product_description) {
       return {
-        title: "Product Not Found | Artema Medical Group",
+        title: "Product Not Found | Wincorn Medical Group",
         description: "The product you are looking for does not exist or is no longer available.",
       };
     }
     // Return the metadata for the found product
     return {
-      title: `${product.product_name} | Artema Medical Group`,
+      title: `${product.product_name} | Wincorn Medical Group`,
       description: product.product_description,
     };
   } catch (error) {
     console.error('Error fetching product:', error);
     return {
-      title: "Error | Artema Medical Group",
+      title: "Error | Wincorn Medical Group",
       description: "There was an error retrieving the product information.",
     };
   }
