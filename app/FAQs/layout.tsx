@@ -2,14 +2,14 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title:
-    "FAQs|Surgical Instruments| Wincorn Medical ",
+    "FAQs| Surgical instruments|Wincorn Medical",
   description:
-    "FAQs section of Wincorn Medical, address common queries regarding our products, services, and policies to provide you with clear information.",
+    "FAQs section: Is Wincorn responsible for any damage to the instrument? What is the duration of applying for a refund? Does the product price include tax?",
 };
 
 export default function BioMedicalLayout({
   children,
-}: { 
+}: {
   children: React.ReactNode;
 }) {
   return <>{children}</>;

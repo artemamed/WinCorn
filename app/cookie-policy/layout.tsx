@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Cookies| Surgical Instruments| Wincorn Medical",
+  title: "Cookies| Surgical equipments| Wincorn Medical",
   description:
-    "Discover high-quality surgical instruments at Wincorn Medical. Explore our range and learn about our cookie policy for a better browsing experience",
+    "At Wincorn Medical, we are committed to protecting your privacy. This Cookie Policy explains how we use cookies and similar technologies on our website",
 };
 
 export default function AboutPageLayout({

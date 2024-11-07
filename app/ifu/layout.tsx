@@ -2,14 +2,14 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title:
-    "IFU|Surgical Instruments| Wincorn Medical ",
+    "IFU| Surgical instruments| Wincorn medical ",
   description:
-    "The IFU documents provide comprehensive guidance on the proper handling, operation, and maintenance of Wincorn Medical's surgical instruments.",
+    "Wincorn Medical provides IFU service on instruments for safe and effective use. Includes user guidelines and product useability steps during surgery.",
 };
 
 export default function BioMedicalLayout({
   children,
-}: { 
+}: {
   children: React.ReactNode;
 }) {
   return <>{children}</>;

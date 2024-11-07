@@ -2,9 +2,9 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "About| Surgical Instruments| Surgical Tools",
+  title: "About us| Surgical Equipments| Wincorn Medical",
   description:
-    "Welcome to Dynamic Medical's About page, where we delve into our mission, values, and commitment to revolutionizing surgical instruments and innovations.",
+    "Wincorn Medical is a trusted provider of high-quality surgical instruments, Explore the CEO and Wincorn Medical vision on healthcare services.",
 };
 
 export default function AboutPageLayout({
@@ -13,6 +13,6 @@ export default function AboutPageLayout({
   children: React.ReactNode;
 }) {
   return <>
-  {/* <CanonicalURL/> */}
-  {children}</>;
+    {/* <CanonicalURL/> */}
+    {children}</>;
 }

@@ -27,10 +27,10 @@ interface ExtendedMetadata extends Metadata {
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: ExtendedMetadata = {
-  metadataBase: new URL("https://artemamed.com/"),
-  title: "Surgical Instruments | Wincorn Medical | General Instruments",
+  metadataBase: new URL("https://win-corn-wr7y.vercel.app/"),
+  title: "Surgical Instruments | Wincorn Medical | Medical Equipements",
   description:
-    "Discover high-quality surgical instruments at Wincorn Medical. We manufacture and supply a wide range of products.",
+    "Wincorn Medical aims to provide quality instruments. Our instruments include scalpels, scissors, retractors, needle holders, and more.",
   verification: {
     google: "_Lqn7kh6lWaoH47eD0BgKLq-XihIvljbrnmT3tdu5gk",
     bing: "BAEE953253739AE12DC726DBB54CCFA0", // Add Bing verification code here
@@ -39,9 +39,9 @@ export const metadata: ExtendedMetadata = {
     canonical: "./",
   },
   openGraph: {
-    title: "Surgical Instruments | Wincorn Medical | General Instruments",
+    title: "Surgical Instruments | Wincorn Medical | Medical Equipements",
     description:
-      "Discover high-quality surgical instruments at Wincorn Medical. We manufacture and supply a wide range of products.",
+      "With a global reach in surgical instruments, Wincorn Medical aims to provide quality instruments. Our instruments include scalpels, scissors, retractors, needle holders, and more.",
     url: "https://artemamed.com/",
     type: "website",
     images: [

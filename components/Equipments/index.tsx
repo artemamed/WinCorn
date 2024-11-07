@@ -45,11 +45,11 @@ const Equipments = () => {
         <div className="flex flex-col justify-evenly items-center space-y-10 py-8 px-4 sm:px-6 md:px-8 lg:px-16 bg-gray-200">
 
             <div className="text-center max-w-4xl mx-auto">
-                <h2 className="text-lg sm:text-xl md:text-2xl lg:text-4xl text-gray-700">
+                <h1 className="text-lg sm:text-xl md:text-2xl lg:text-4xl text-gray-700">
                     <strong>
                         A Healthier World for Everyone
                     </strong>
-                </h2>
+                </h1>
             </div>
             <div className="text-center max-w-7xl mx-auto">
                 <h3 className="text-lg sm:text-xl md:text-2xl lg:text-2xl text-gray-700">

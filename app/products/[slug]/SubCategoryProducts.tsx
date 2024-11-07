@@ -213,11 +213,11 @@ const SubCategoryProducts = ({ slug }: { slug: string }) => {
   if (!isError && allProducts) {
     return (
       <div className="flex flex-col lg:flex-row gap-4 p-4 bg-gray-300 h-[calc(100vh-80px)]">
-    {/* Categories Section */}
-    <div className="hidden lg:block lg:w-1/3 xl:w-1/4 h-full overflow-y-auto">
-          <h2 className="text-2xl font-bold text-gray-800 pb-4 border-b-2 border-gray-300 hover:text-green-500">
+        {/* Categories Section */}
+        <div className="hidden lg:block lg:w-1/3 xl:w-1/4 h-full overflow-y-auto">
+          <h1 className="text-2xl font-bold text-gray-800 pb-4 border-b-2 border-gray-300 hover:text-green-500">
             Categories
-          </h2>
+          </h1>
           {allCategories &&
             allCategories.map(
               (category: { category_slug: string; category_name: string }, index: number) => (
