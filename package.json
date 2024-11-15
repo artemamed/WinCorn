@@ -51,7 +51,7 @@
     "embla-carousel-react": "^8.0.0-rc22",
     "framer-motion": "^10.18.0",
     "lucide-react": "^0.293.0",
-    "next": "^14.2.3",
+    "next": "^14.2.10",
     "next-seo": "^6.5.0",
     "nextjs-toploader": "^1.6.4",
     "nodemailer": "^6.9.14",
