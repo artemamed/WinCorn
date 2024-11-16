@@ -11,7 +11,7 @@ export async function POST(request: NextRequest) {
     const authenticationResponse = await axios.post(
       `${process.env.ApiEdgePoint}/api/add-client-user`,
       {
-        user_id: 94,
+        user_id: 280,
         user_from: "web",
         first_name: data.first_name,
         last_name: data.last_name,
