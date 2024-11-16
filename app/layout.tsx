@@ -27,7 +27,7 @@ interface ExtendedMetadata extends Metadata {
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: ExtendedMetadata = {
-  metadataBase: new URL("https://win-corn-wr7y.vercel.app/"),
+  metadataBase: new URL("https://wincornmedical.com/"),
   title: "Surgical Instruments | Wincorn Medical | Medical Equipements",
   description:
     "Wincorn Medical aims to provide quality instruments. Our instruments include scalpels, scissors, retractors, needle holders, and more.",

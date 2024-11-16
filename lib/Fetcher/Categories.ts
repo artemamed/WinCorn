@@ -14,7 +14,7 @@ export const fetchCategoriesNames = async () => {
   const token = getToken();
   try {
     const response = await axiosInstance.get(
-      "/api/get-categories-by-user-id/94",
+      "/api/get-categories-by-user-id/280",
       {
         headers: {
           Authorization: `Bearer ${token}`,
@@ -117,7 +117,7 @@ export const ParticularSubCategoryProductsWithMetaData = async (
 
 export const getProductsSlugByUserId = async () => {
   try {
-    const response = await axiosInstance.get("/api/get-products-slug-by-user-id/94");
+    const response = await axiosInstance.get("/api/get-products-slug-by-user-id/280");
     if (!response || response.status !== 200) {
       throw new Error("Failed to fetch products for the user");
     }
